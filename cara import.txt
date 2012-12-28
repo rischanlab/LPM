@@ -1,0 +1,7 @@
+ Letakkan file hasil export tadi kedalam folder C:\Documents and Settings\Administrator (untuk Windows XP) atauC:\user\Administrator (untuk Windows Seven), nama Admininstrator sesuai dengan nama user pada komputer Anda
+- Buka command di windows, (Windows + R => Ketik CMD)
+- Masukkan perintah berikut ini
+
+
+
+imp heru/tiger file=emp.dmp full=yes

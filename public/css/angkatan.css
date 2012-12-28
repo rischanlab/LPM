@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+	
+	
+	#container{
+		margin: 0 auto;
+		width: 650px;
+		border: 1px solid #D0D0D0;
+		-webkit-box-shadow: 0 0 8px #D0D0D0;
+	}	
+	
+	h1 {
+		color: #444;
+		background-color: transparent;
+		font-size: 19px;
+		font-weight: normal;
+		padding: 15px 15px 15px 15px;
+	}	
+
+	a {
+		color: #003399;
+		background-color: transparent;
+		font-weight: normal;
+	}
+	
+	#form input, #form select {
+		padding: 2px 5px;
+		margin-right: 5px;
+		border: 1px solid #D0D0D0;
+		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		background-color:#FFFFFF;
+		float: left;
+	}
+	
+	#form input#submit, #form input#button {
+		background-color: #003399;
+		border: 1px solid #003399;
+		color: #FFFFFF;
+		float: left;
+	}
+
+	#form {
+		border-top: 1px solid #D0D0D0;
+		border-bottom: 1px solid #D0D0D0;
+		padding: 15px 15px 15px 15px;
+		background-color: #f9f9f9;
+		color: #003399;		
+	}
+	
+	#message {
+		color: #FFFFFF;
+		background-color: #003399;
+		text-align:center;
+		font-weight: bold;
+		font-size: 16px;
+	}
+	
+	#form #field {
+		height: 25px;
+		clear: both;
+	}
+	
+	#form span {
+		width: 100px;
+		display: block;
+		line-height: 25px;
+		margin-right: 10px;
+		float: left;
+	}
+	
+	#form #error {
+		color: #FF0000;
+	}
+	
+	#table {
+		color: #444;
+		background-color: transparent;
+		padding: 15px 15px 15px 15px;		
+	}
+	
+	table {
+		width: 620px;
+		border: 0;
+	}
+	
+	tr#head td {
+		background-color: #E0E0E0;
+		color: #000000;
+	}
+	
+	tr td#no {
+		width: 40px;
+		text-align: center; 
+	}
+	
+	tr td#judul {
+		width: 250px;
+	}
+	
+	tr td#kategori {
+		width: 100px;
+		text-align: center; 
+	}
+	
+	tr td#stok {
+		width: 60px;
+		text-align: center; 
+	}
+	
+	tr td#harga {
+		width: 70px;
+		text-align: center; 
+	}
+	
+	tr td#action {
+		width: 100px;
+		text-align: center; 
+	}

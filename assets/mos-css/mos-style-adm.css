@@ -1,0 +1,15 @@
+/**SIMPLE THEME BACK END MOS**/
+/*Desainer		: Ari Rusmanto*/
+/*Email			: hello@arirusmanto.com*/
+/*YM			: ariecupu@ymail.com*/
+/*Official Site	: arirusmanto.com*/
+body {
+	background: url(img/latar.jpg);
+	margin: 0;
+	padding: 0;
+	font-family: Courier;
+	font-size: 9px;
+	color: #2e2e2e;
+	text-align: center;
+}
+

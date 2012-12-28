@@ -1,0 +1,92 @@
+create sequence kkn_mhs_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
+create sequence kkn_kelompok_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+create sequence kkn_detail_kelompok_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
+create sequence kkn_ta_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+create sequence kkn_periode_seq
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+create sequence kkn_angkatan_seq
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
+
+
+create or replace trigger kkn_mhs_trigger
+before insert on KKN_MHS
+for each row
+begin
+select kkn_mhs_seq.nextval into :new.NO from dual;
+end;
+/
+
+
+create or replace trigger kkn_kelompok_trigger
+before insert on KKN_KELOMPOK
+for each row
+begin
+select kkn_kelompok_seq.nextval into :new.ID_KELOMPOK from dual;
+end;
+/
+
+create or replace trigger kkn_detail_kelompok_trigger
+before insert on KKN_DETAIL_KELOMPOK
+for each row
+begin
+select kkn_detail_kelompok_seq.nextval into :new.ID_DETAIL_KELOMPOK from dual;
+end;
+/
+
+
+create or replace trigger kkn_ta
+before insert on KKN_TA
+for each row
+begin
+select kkn_ta_seq.nextval into :new.ID_TA from dual;
+end;
+/
+
+create or replace trigger kkn_periode
+before insert on KKN_PERIODE
+for each row
+begin
+select kkn_periode_seq.nextval into :new.ID_PERIODE from dual;
+end;
+/
+
+create or replace trigger kkn_angkatan
+before insert on KKN_ANGKATAN
+for each row
+begin
+select kkn_angkatan_seq.nextval into :new.ID_ANGKATAN from dual;
+end;
+/
+
+CREATE OR REPLACE TRIGGER kkn_peserta_after_delete
+AFTER DELETE ON KKN_DETAIL_KELOMPOK 
+FOR EACH ROW
+BEGIN
+UPDATE KKN_MHS SET SUDAH='2' WHERE NO=:old.NO;
+END;
+/

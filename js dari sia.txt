@@ -1,0 +1,65 @@
+
+RISCHAN M
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650007&nm_user=RISCHAN%20MAFRUR&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+ESTU FARDANI
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650004&nm_user=ESTU%20FARDANI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+YOGI SURYO N
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650001&nm_user=YOGI%20SURYA%20NUGROHO&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+RIZKI TUNJUNG
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650006&nm_user=RIZKI%20TUNJUNG&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+ANIK MUHANTINI
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650055&nm_user=ANIK%20MUHANTINI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+
+
+09650031	ABDUL%20HAFIDH%20SIDIQ
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650031&nm_user=ABDUL%20HAFIDH%20SIDIQ&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650020	ABDUL%20WAHID
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650020&nm_user=ABDUL%20WAHID&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650002	ADITYA%20FERDIANA%20ARIEF
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650002&nm_user=ADITYA%20FERDIANA%20ARIEF&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650016	ANDRI%20FAUJI
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650016&nm_user=ANDRI%20FAUJI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650037	ARUM%20PANDANWANGI
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650037&nm_user=ARUM%20PANDANWANGI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650018	AYU%20DWI%20NOVIYATI
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650018&nm_user=AYU%20DWI%20NOVIYATI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650027	AZIZ%20ARDIANSYAH%20WAHYUDI
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650027&nm_user=AZIZ%20ARDIANSYAH%20WAHYUDI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+09650023	DELISA%20FEBRIANA%20BUDI%20ARDITA
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650023&nm_user=DELISA%20FEBRIANA%20BUDI%20ARDITA&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
+
+
+
+
+dosen
+
+javascript:openWindow('http://elearning.sia.uin-suka.ac.id/st/conf/cek_login.php?kd_kelas=2260710019781&nm_kelas=Pemrograman%20Terstruktur%20%20%20%20A&kd_ta=2012&kd_smt=1&id_user=150368349&nm_user=SUMARSONO,%20ST.,%20M.Kom.&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF20414&sks_mk=4&status=2')
+
+
+bPK sumarsono
+http://localhost/LPM/cek_login.php?kd_kelas=2260710019781&nm_kelas=Pemrograman%20Terstruktur%20%20%20%20A&kd_ta=2012&kd_smt=1&id_user=150368349&nm_user=SUMARSONO,%20ST.,%20M.Kom.&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF20414&sks_mk=4&status=2
+
+javascript:openWindow('http://elearning.sia.uin-suka.ac.id/st/conf/cek_login.php?kd_kelas=2260710019896&nm_kelas=Kuliah%20Kerja%20Nyata%20%20%20%20A&kd_ta=2012&kd_smt=1&id_user=150293687&nm_user=AGUS%20MULYANTO,%20S.SI,%20M.KOM&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=FST50224&sks_mk=4&status=2')
+
+pak agus
+http://localhost/LPM/cek_login.php?kd_kelas=2260710019896&nm_kelas=Kuliah%20Kerja%20Nyata%20%20%20%20A&kd_ta=2012&kd_smt=1&id_user=150293687&nm_user=AGUS%20MULYANTO,%20S.SI,%20M.KOM&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=FST50224&sks_mk=4&status=2
