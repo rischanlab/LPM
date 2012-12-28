@@ -125,9 +125,13 @@ window.onload = loadImages;
 
 										<tr>
 											<td valign="top" class="txt_login">Golongan Darah*</td>
-											<td class="txt_login"><input type="text" name="gol_darah"
-												class="inputy"
-												value="<?php echo set_value('GOL_DARAH',$this->form_data->GOL_DARAH); ?>" />
+											<td>
+											<select id="gol_darah" name="gol_darah">                                    
+												<option value="A" <?=$this->form_data->GOL_DARAH == 'A' ? ' selected="selected"' : '';?>>A</option>
+												<option value="B" <?=$this->form_data->GOL_DARAH == 'B' ? ' selected="selected"' : '';?>>B</option>
+												<option value="AB" <?=$this->form_data->GOL_DARAH == 'AB' ? ' selected="selected"' : '';?>>AB</option>
+												<option value="O" <?=$this->form_data->GOL_DARAH == 'O' ? ' selected="selected"' : '';?>>O</option>                                                                           
+												</select>
 											</td>
 										</tr>
 										<tr>

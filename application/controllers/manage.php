@@ -13,15 +13,12 @@ class Manage extends CI_Controller {
 	}
 
 	function _manage_output($output = null)
-	{		
-		
+	{
 		$data = array();
 		$data["tanggal"] = date("d-m-Y");
 		$this->load->view('admin/bg_atas', $data);
 		$this->load->view('admin/manage.php',$output);
 	}
-
-
 
 	function index()
 
@@ -33,7 +30,7 @@ class Manage extends CI_Controller {
 			$data["NIM"]=$pecah[0];
 			$data["NAMA"]=$pecah[1];
 			$data["STATUS"]=$pecah[3];
-			
+			$data['scriptmce'] = $this->scripttiny_mce();
 			if($data["STATUS"]=="Admin"){
 				$this->load->view('admin/bg_head',$data);
 				$this->load->view('admin/isi_index',$data);
@@ -58,9 +55,6 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		}
 	}
 	
-	
-	
-	
 
 	function peserta_kkn_management()
 	{
@@ -73,32 +67,26 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 
 			if($data["STATUS"]=="Admin"){
 				try{
-					/* This is only for the autocompletion */
 					$crud = new grocery_CRUD();
 
 					$crud->set_theme('datatables');
 					$crud->where('SUDAH','2');
 					$crud->set_table('KKN_MHS');
 					$crud->set_language("indonesian");
-						
-					$crud->display_as('NIM','Data Pribadi');
-					//$crud->set_relation('NIM','D_MAHASISWA','Nim :{NIM}, Angkatan :{ANGKATAN},Nama :{NAMA},Jk: {J_KELAMIN},Asal: {ALAMAT_MHS}, Golongan Darah: {GOL_DARAH},HP Mhs: {HP_MHS},Telp Keluarga: {TELP_MHS}');
 					$crud->display_as('FAK','Fakultas')
-					->display_as('NO','No Pendaftaran')
-					->display_as('ALAMAT_JOGJA','Alamat di Jogja')
-					->display_as('NM_KEC_JOGJA','Kec di Jogja')
-					->display_as('NM_KAB_JOGJA','Kab di Jogja')
-					->display_as('PRESTASI','Keahlian')
-					->display_as('RT_JOGJA','RT di Jogja')
-					->display_as('DESA_JOGJA','Desa di Jogja')
-					->display_as('KODE_POS_JOGJA','Kod Pos di Jogja')
-					->display_as('TRANSPORTASI','Transportasi')
-					->display_as('PATH_SK_DOKTER','Upload SK Dokter')
-					->display_as('PATH_SK_GOLONGAN_DARAH','Upload SK Gol Darah')
-					->display_as('PATH_SK_CUTI','Upload SK Cuti Kerja')
-					->display_as('PATH_SK_TIDAK_HAMIL','Upload SK Tidak Hamil');
-						
-
+					->display_as('NAMA','Nama')
+					->display_as('JK','J.Kelamin')
+					->display_as('GOL_DARAH','GD')
+					->display_as('DESA_RUMAH','Asal')
+					->display_as('NM_KEC_RUMAH','Kec Asal')
+					->display_as('NM_KAB_RUMAH','Kab Asal')
+					->display_as('NM_PROP_RUMAH','Prop Asal')
+					->display_as('HP_MHS','Hp')
+					->display_as('TELP_MHS','Telp Rumah')
+					->display_as('ALAMAT_JOGJA','Alamat Jogja')
+					->display_as('DESA_JOGJA','Desa')
+					->display_as('NM_KEC_JOGJA','Kec')
+					->display_as('NM_KAB_JOGJA','Kab');
 
 					$crud->unset_edit_fields('SUDAH');
 					$crud->unset_add();
@@ -108,7 +96,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 					$crud->set_subject('Peserta KKN');
 					$crud->required_fields('ALAMAT_JOGJA');
 
-					$crud->columns('NIM','FAK','ALAMAT_JOGJA','PRESTASI','NM_KEC_JOGJA','NM_KAB_JOGJA');
+					$crud->columns('NIM','NAMA','JK','GOL_DARAH','FAK','DESA_RUMAH','NM_KEC_RUMAH','NM_KAB_RUMAH','NM_PROP_RUMAH','HP_MHS','TELP_MHS','ALAMAT_JOGJA');
 					$crud->set_field_upload('PATH_SK_DOKTER','assets/kesehatan');
 					$crud->set_field_upload('PATH_SK_GOLONGAN_DARAH','assets/goldarah');
 					$crud->set_field_upload('PATH_SK_CUTI','assets/cutikerja');
@@ -160,41 +148,36 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 
 			if($data["STATUS"]=="Admin"){
 				try{
-					/* This is only for the autocompletion */
 					$crud = new grocery_CRUD();
 
 					$crud->set_theme('datatables');
 					//$crud->where('SUDAH','2');
 					$crud->set_table('KKN_MHS');
 					$crud->set_language("indonesian");
-						
-					$crud->display_as('NIM','Data Pribadi');
-					$crud->set_relation('NIM','D_MAHASISWA','Nim :{NIM}, Angkatan :{ANGKATAN},Nama :{NAMA},Jk: {J_KELAMIN},Asal: {ALAMAT_MHS}, Golongan Darah: {GOL_DARAH},HP Mhs: {HP_MHS},Telp Keluarga: {TELP_MHS}');
 					$crud->display_as('FAK','Fakultas')
-					->display_as('NO','No Pendaftaran')
-					->display_as('ALAMAT_JOGJA','Alamat di Jogja')
-					->display_as('NM_KEC_JOGJA','Kec di Jogja')
-					->display_as('NM_KAB_JOGJA','Kab di Jogja')
-					->display_as('PRESTASI','Keahlian')
-					->display_as('RT_JOGJA','RT di Jogja')
-					->display_as('DESA_JOGJA','Desa di Jogja')
-					->display_as('KODE_POS_JOGJA','Kod Pos di Jogja')
-					->display_as('TRANSPORTASI','Transportasi')
-					->display_as('PATH_SK_DOKTER','Upload SK Dokter')
-					->display_as('PATH_SK_GOLONGAN_DARAH','Upload SK Gol Darah')
-					->display_as('PATH_SK_CUTI','Upload SK Cuti Kerja')
-					->display_as('PATH_SK_TIDAK_HAMIL','Upload SK Tidak Hamil');
-						
+					->display_as('NAMA','Nama')
+					->display_as('JK','J.Kelamin')
+					->display_as('GOL_DARAH','GD')
+					->display_as('DESA_RUMAH','Asal')
+					->display_as('NM_KEC_RUMAH','Kec Asal')
+					->display_as('NM_KAB_RUMAH','Kab Asal')
+					->display_as('NM_PROP_RUMAH','Prop Asal')
+					->display_as('HP_MHS','Hp')
+					->display_as('TELP_MHS','Telp Rumah')
+					->display_as('ALAMAT_JOGJA','Alamat Jogja')
+					->display_as('DESA_JOGJA','Desa')
+					->display_as('NM_KEC_JOGJA','Kec')
+					->display_as('NM_KAB_JOGJA','Kab');
 
-					$crud->unset_edit();
-					$crud->unset_delete();
 					$crud->unset_edit_fields('SUDAH');
 					$crud->unset_add();
+					$crud->unset_edit();
+					$crud->unset_delete();
 					$crud->unset_add_fields('NO','SUDAH');
 					$crud->set_subject('Peserta KKN');
 					$crud->required_fields('ALAMAT_JOGJA');
 
-					$crud->columns('NIM','FAK','ALAMAT_JOGJA','PRESTASI','NM_KEC_JOGJA','NM_KAB_JOGJA');
+					$crud->columns('NIM','NAMA','JK','GOL_DARAH','FAK','DESA_RUMAH','NM_KEC_RUMAH','NM_KAB_RUMAH','NM_PROP_RUMAH','HP_MHS','TELP_MHS','ALAMAT_JOGJA');
 					$crud->set_field_upload('PATH_SK_DOKTER','assets/kesehatan');
 					$crud->set_field_upload('PATH_SK_GOLONGAN_DARAH','assets/goldarah');
 					$crud->set_field_upload('PATH_SK_CUTI','assets/cutikerja');
@@ -251,7 +234,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->set_theme('datatables');
 					
 				$crud->set_table('KKN_KELOMPOK');
-				$crud->set_relation('KD_DOSEN','D_DOSEN','{NM_DOSEN} | {ALMT_RUMAH}');
+				$crud->set_relation('KD_DOSEN','KKN_DPL','{NM_DOSEN} | {ALMT_RUMAH}');
 				$crud->display_as('KD_DOSEN','Nama DPL | Alamat Rumah');
 					
 				$crud->set_relation('ID_ANGKATAN','KKN_ANGKATAN','ANGKATAN');
@@ -435,10 +418,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->display_as('ID_TA','Pilih Tahun Akademik');
 				$crud->required_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA');
 				
-				//$crud->field_type('PERIODE','set',array('I','II','III','IV'));
-				//$crud->field_type('PERIODE','dropdown', array('I','II','III','IV'));
-				$crud->field_type('PERIODE','enum',array('I','II','III','IV'));
-				$crud->display_as('PERIODE','Periode')
+				$crud->field_type('PERIODE','set',array('I','II','III','IV'));
+				$crud->display_as('PERIODE','Nama Periode')
 				->display_as('TANGGAL_MULAI','Tanggal Mulai KKN')
 				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN');
 				
@@ -569,41 +550,6 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				  $this->load->view('admin/input',$data_input);
 				  $data_dpl['dpl'] = $this->Manage_model->get_dropdown_dosen();
 				  $this->load->view('admin/input_dpl',$data_dpl);
-				   
-				  
-				  
-
-				  
-				  
-				 
-				  
-				
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
 				
 				}
 				else{

@@ -14,7 +14,7 @@ class Mediatutorialprofile extends CI_Model {
     */
 	
 	function getPath($nim){
-		$query = $this->db->query("select PATH_FOTO from D_MAHASISWA where NIM='$nim'");
+		$query = $this->db->query("select PATH_FOTO from KKN_MHS where NIM='$nim'");
 		return $query;
 	}
 	

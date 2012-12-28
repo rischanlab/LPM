@@ -12,10 +12,7 @@
 				<th class="data">Data Diri</th>
 				<th class="data"></th>
 			</tr>
-			<tr>
-				<td class="data">No Pendaftaran</td>
-				<td class="data"><?php echo $mahasiswa->NO; ?></td>
-			</tr>
+			
 			<tr>
 				<td class="data">Nama</td>
 				<td class="data"><?php echo $mahasiswa->NAMA; ?></td>
@@ -24,21 +21,18 @@
 				<td class="data">NIM</td>
 				<td class="data"><?php echo $mahasiswa->NIM; ?></td>
 			</tr>
-			<tr>
-				<td class="data">Angkatan</td>
-				<td class="data"><?php echo $mahasiswa->ANGKATAN; ?></td>
-			</tr>
+			
 			<tr>
 				<td class="data">Prodi</td>
-				<td class="data"><?php echo $mahasiswa->NM_PRODI; ?></td>
+				<td class="data"><?php echo $mahasiswa->PRODI; ?></td>
 			</tr>
 			<tr>
 				<td class="data">Fakultas</td>
-				<td class="data"><?php echo $mahasiswa->NM_FAK; ?></td>
+				<td class="data"><?php echo $mahasiswa->FAK; ?></td>
 			</tr>
 			<tr>
 				<td class="data">Jenis Kelamin</td>
-				<td class="data"><?php echo $mahasiswa->J_KELAMIN; ?></td>
+				<td class="data"><?php echo $mahasiswa->JK; ?></td>
 			</tr>
 			<tr>
 				<td class="data">No HP</td>
@@ -80,22 +74,25 @@
 			</tr>
 			<tr>
 				<td class="data">Alamat Asal</td>
-				<td class="data"><?php echo $mahasiswa->ALAMAT_MHS; ?></td>
+				<td class="data"><?php echo $mahasiswa->ALAMAT_RUMAH; ?></td>
 			</tr>
 			<tr>
 				<td class="data">RT/RW</td>
-				<td class="data"><?php echo $mahasiswa->RT; ?></td>
+				<td class="data"><?php echo $mahasiswa->RT_RUMAH; ?></td>
 			</tr>
 			
-		
+			<tr>
+				<td class="data">Desa</td>
+				<td class="data"><?php echo $mahasiswa->DESA_RUMAH; ?></td>
+			</tr>
 			
 			<tr>
 				<td class="data">Kabupaten</td>
-				<td class="data"><?php echo $mahasiswa->NM_KAB; ?></td>
+				<td class="data"><?php echo $mahasiswa->NM_KAB_RUMAH; ?></td>
 			</tr>
 			<tr>
 				<td class="data">Propinsi</td>
-				<td class="data"><?php echo $mahasiswa->NM_PROP; ?></td>
+				<td class="data"><?php echo $mahasiswa->NM_PROP_RUMAH; ?></td>
 			</tr>
 			<tr>
 				<td class="data">Alamat Jogja</td>

@@ -34,6 +34,28 @@ class Form_Model extends CI_Model
 		return $query;
 
 	}
+	function insert_foto($nim,$foto){
+		$query=$this->db->query("update KKN_MHS set PATH_FOTO='$foto' where NIM='$nim' ");
+
+	}
+
+	function insert_sk_sehat($nim,$sehat){
+		$query=$this->db->query("update KKN_MHS set PATH_SK_DOKTER='$sehat' where NIM='$nim'");
+
+	}
+
+	function insert_sk_gol_darah($nim,$gol_darah){
+		$query=$this->db->query("update KKN_MHS set PATH_SK_GOLONGAN_DARAH='$gol_darah'	where NIM='$nim' ");
+
+	}
+	function insert_sk_cuti_kerja($nim,$cuti){
+		$query=$this->db->query("update KKN_MHS set PATH_SK_CUTI='$cuti' where NIM='$nim'");
+
+	}
+	function insert_sk_tidak_hamil($nim,$tidak_hamil){
+		$query=$this->db->query("update KKN_MHS set PATH_SK_TIDAK_HAMIL='$tidak_hamil' where NIM='$nim'");
+
+	}
 	
 	
 	
@@ -45,6 +67,13 @@ class Form_Model extends CI_Model
 	
 	
 	
+	
+	
+	
+	
+	
+	
+	/**
 	
 	function list_all(){
 		return $this->db->get($D_MAHASISWA);
@@ -87,30 +116,9 @@ class Form_Model extends CI_Model
 
 	}
 
+	**/
+
 	
-
-	function insert_foto($nim,$foto){
-		$query=$this->db->query("update D_MAHASISWA set PATH_FOTO='$foto' where NIM='$nim' ");
-
-	}
-
-	function insert_sk_sehat($nim,$sehat){
-		$query=$this->db->query("update KKN_MHS set PATH_SK_DOKTER='$sehat' where NIM='$nim'");
-
-	}
-
-	function insert_sk_gol_darah($nim,$gol_darah){
-		$query=$this->db->query("update KKN_MHS set PATH_SK_GOLONGAN_DARAH='$gol_darah'	where NIM='$nim' ");
-
-	}
-	function insert_sk_cuti_kerja($nim,$cuti){
-		$query=$this->db->query("update KKN_MHS set PATH_SK_CUTI='$cuti' where NIM='$nim'");
-
-	}
-	function insert_sk_tidak_hamil($nim,$tidak_hamil){
-		$query=$this->db->query("update KKN_MHS set PATH_SK_TIDAK_HAMIL='$tidak_hamil' where NIM='$nim'");
-
-	}
 
 
 

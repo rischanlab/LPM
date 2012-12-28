@@ -9,7 +9,7 @@ class Mahasiswa extends CI_Controller {
 
 		$this->load->library(array('form_validation','session','image_lib','FPDF'));
 		$this->load->helper(array('form','url', 'text_helper','date'));
-		$this->load->database();
+		$this->db = $this->load->database('kkn', TRUE);
 		session_start();
 	}
 

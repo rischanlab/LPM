@@ -49,7 +49,7 @@ $active_group = 'kkn';
 $active_record = TRUE;
 
 $db['kkn']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
-$db['kkn']['username'] = "kkn";
+$db['kkn']['username'] = "KKN";
 $db['kkn']['password'] = "kkn";
 $db['kkn']['database'] = "";
 $db['kkn']['dbdriver'] = "oci8";
