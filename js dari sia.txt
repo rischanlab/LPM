@@ -2,6 +2,18 @@
 RISCHAN M
 http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650007&nm_user=RISCHAN%20MAFRUR&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
 
+
+
+SYARIAH
+MASKUN
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09350007&nm_user=MASKUN%20ABIDIN&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=PERBANDINGAN%20MAZHAB&kd_mk=PMH4000&sks_mk=0&status=1
+
+
+
+
+
+
+
 ESTU FARDANI
 http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650004&nm_user=ESTU%20FARDANI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
 

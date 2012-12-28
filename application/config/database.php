@@ -81,8 +81,8 @@ $db['saintek']['autoinit'] = TRUE;
 $db['saintek']['stricton'] = FALSE;
 
 $db['syariah']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
-$db['syariah']['username'] = "sia";
-$db['syariah']['password'] = "sia";
+$db['syariah']['username'] = "syariah";
+$db['syariah']['password'] = "syariah";
 $db['syariah']['database'] = "";
 $db['syariah']['dbdriver'] = "oci8";
 $db['syariah']['dbprefix'] = '';

@@ -52,7 +52,7 @@ window.onload = loadImages;
 							<h1 class="log">Data Mahasiswa Peserta KKN</h1>
 							<!-- You are login as <span id="typenya"><strong><?=$h1;?></strong></span>-->
 
-							<form action="<?php echo base_url(); ?>form/update" method="POST">
+							<form action="<?php echo base_url(); ?>form/insert" method="POST">
 								<table class="form form_login">
 									<tbody>
 
@@ -166,14 +166,14 @@ window.onload = loadImages;
 											<td valign="top" class="txt_login">Transportasi*</td>
 											<td class="txt_login"><input type="text" name="transportasi"
 												class="inputy"
-												value="<?php echo set_value('TRANSPORTASI',$this->form_data->TRANSPORTASI); ?>" />
+												value="" />
 											</td>
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">Prestasi/Keahlian*</td>
 											<td class="txt_login"><input type="text" name="prestasi"
 												class="inputy"
-												value="<?php echo set_value('PRESTASI',$this->form_data->PRESTASI); ?>" />
+												value="" />
 											</td>
 										</tr>
 
@@ -248,35 +248,35 @@ window.onload = loadImages;
 											<td valign="top" class="txt_login">Alamat Jogja*</td>
 											<td class="txt_login"><input type="text" name="alamat_jogja"
 												class="inputy"
-												value="<?php echo set_value('ALAMAT_JOGJA',$this->form_data->ALAMAT_JOGJA); ?>" />
+												value="" />
 											</td>
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">RT/RW</td>
 											<td class="txt_login"><input type="text" name="rt_jogja"
 												class="inputy"
-												value="<?php echo set_value('RT_JOGJA',$this->form_data->RT_JOGJA); ?>" />
+												value="" />
 											</td>
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">Desa/Kelurahan*</td>
 											<td class="txt_login"><input type="text" name="desa_jogja"
 												class="inputy"
-												value="<?php echo set_value('DESA_JOGJA',$this->form_data->DESA_JOGJA); ?>" />
+												value="" />
 											</td>
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">Kecamatan*</td>
 											<td class="txt_login"><input type="text" name="nm_kec_jogja"
 												class="inputy"
-												value="<?php echo set_value('NM_KEC_JOGJA',$this->form_data->NM_KEC_JOGJA); ?>" />
+												value="" />
 											</td>
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">Kabupaten*</td>
 											<td class="txt_login"><input type="text" name="nm_kab_jogja"
 												class="inputy"
-												value="<?php echo set_value('NM_KAB_JOGJA',$this->form_data->NM_KAB_JOGJA); ?>" />
+												value="" />
 											</td>
 
 
