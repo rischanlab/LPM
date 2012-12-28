@@ -13,15 +13,6 @@ class Form_Model extends CI_Model
 	
 	
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	function list_all(){
 		return $this->db->get($D_MAHASISWA);
 	}
