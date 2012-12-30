@@ -1,5 +1,9 @@
 Alur Aplikasi
 
+Aplikasi ini sama dengan project sebelumnya yaitu SI_KKN, hanya karena kondisi DBnya itu tiap fakultas berbeda sehingga
+aplikasi ini harus support multiple database. Dan yang sebelumnya DB KKN ini dijadikan satu dengan DB SIA, saat ini dibuat
+DB sendiri yaitu DB KKN.
+
 Mahasiswa
 1.Login menggunakan SIA
 2.Jika dia sudah Entri KRS,akan ada menu KKN
@@ -37,11 +41,13 @@ Admin LPM
 11. Admin bisa mengexport seluruh data peserta KKN per TA/Periode/Angkatan
 12. Searching Member berdasarkan ... :-D
 13. ketika da perpindahan anggota kelompok, tidak ad menu edit, tapi di hapus kemudian insert lagi ..
-
+14. Manage DPL.
+15. Generate Sertifikat KKN
 
 
 Dosen/ DPL
 Bagi yang di tunjuk sebagai DPL KKN seharusnya di SIa dosen yang bersangkutan ad menu KKN... klo g ad i don't know
 1. Dosen bisa melihat Kelompok yang di bina dan seluruh mahasiswa KKN yang didalamnya termasuk juga tempat KKNnya
+2. Input Nilai Bagi mahasiswa/peserta KKN yang dibina
 
 
