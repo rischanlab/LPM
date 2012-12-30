@@ -2,7 +2,7 @@ Alur Aplikasi
 
 Aplikasi ini sama dengan project sebelumnya yaitu SI_KKN, hanya karena kondisi DBnya itu tiap fakultas berbeda sehingga
 aplikasi ini harus support multiple database. Dan yang sebelumnya DB KKN ini dijadikan satu dengan DB SIA, saat ini dibuat
-DB sendiri yaitu DB KKN.
+DB sendiri yaitu DB KKN. Sehingga struktur DB jelas berbeda dan mengubah beberapa source dan proses bisnisnya.
 
 Mahasiswa
 1.Login menggunakan SIA
