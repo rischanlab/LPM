@@ -179,17 +179,17 @@ CREATE TABLE  "KKN_ADMIN" (
 
    
  CREATE TABLE KKN_FAK(
+ ID_FAK								NUMBER,
  KD_FAK								VARCHAR2(5),
  NM_FAK                                           		VARCHAR2(75),
- CONSTRAINT kkn_fak_pk PRIMARY KEY(KD_FAK));
+ CONSTRAINT kkn_fak_pk PRIMARY KEY(ID_FAK));
  
- CREATE TABLE KKN_MATKUL(
- ID								NUMBER,
+ CREATE TABLE KKN_MATAKULIAH(
+ ID_MK								NUMBER,
  KD_MK								VARCHAR2(50),
- KD_FAK                                           		VARCHAR2(5),
- CONSTRAINT kkn_mk_pk PRIMARY KEY(ID),
- CONSTRAINT kd_mk_kkn_unique UNIQUE (KD_MK),
- CONSTRAINT kkn_kd_fak_fk FOREIGN KEY(KD_FAK) REFERENCES KKN_FAK(KD_FAK));
+ ID_FAK                                           		NUMBER,
+ CONSTRAINT kkn_matakuliah_pk PRIMARY KEY(ID_MK),
+ CONSTRAINT kkn_id_fak_fk FOREIGN KEY(ID_FAK) REFERENCES KKN_FAK(ID_FAK));
  
 
    

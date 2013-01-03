@@ -626,14 +626,14 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud = new grocery_CRUD();
 				$crud->set_language("indonesian");
 				$crud->set_theme('datatables');
-				$crud->set_table('KKN_MATKUL');
-				$crud->set_relation('KD_FAK','KKN_FAK','NM_FAK');
-				$crud->display_as('KD_FAK','Fakultas');
+				$crud->set_table('KKN_MATAKULIAH');
+				$crud->set_relation('ID_FAK','KKN_FAK','NM_FAK');
+				$crud->display_as('ID_FAK','Fakultas');
 				$crud->display_as('KD_MK','Kode Matakuliah KKN');
 			
-				$crud->add_fields('KD_MK','KD_FAK');
-				$crud->edit_fields('KD_MK','KD_FAK');
-				$crud->columns('KD_MK','KD_FAK');
+				$crud->add_fields('KD_MK','ID_FAK');
+				$crud->edit_fields('KD_MK','ID_FAK');
+				$crud->columns('KD_MK','ID_FAK');
 			
 				$output = $crud->render();
 		
@@ -737,7 +737,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
   }
 
 
-
+	
+ 
 
 
 

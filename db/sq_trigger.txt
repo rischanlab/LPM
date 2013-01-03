@@ -42,10 +42,22 @@ increment by 1
 nomaxvalue; 
 
 
-create sequence kkn_kdmatkul_seq 
+create sequence kkn_matakuliah_seq 
 start with 1 
 increment by 1 
 nomaxvalue; 
+
+
+create sequence kkn_fak_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
+
+
+
+
 
 create or replace trigger kkn_mhs_trigger
 before insert on KKN_MHS
@@ -121,13 +133,27 @@ select kkn_admin_seq.nextval into :new.ID from dual;
 end;
 /
 
-create or replace trigger kkn_kdmatkul_trigger
-before insert on KKN_MATKUL
+create or replace trigger kkn_matakuliah_trigger
+before insert on KKN_MATAKULIAH
 for each row
 begin
-select kkn_kdmatkul_seq.nextval into :new.ID from dual;
+select kkn_matakuliah_seq.nextval into :new.ID_MK from dual;
 end;
 /
+
+create or replace trigger kkn_fak_trigger
+before insert on KKN_FAK
+for each row
+begin
+select kkn_fak_seq.nextval into :new.ID_FAK from dual;
+end;
+/
+
+
+
+
+
+
 
 
 CREATE OR REPLACE TRIGGER nilaihuruf
