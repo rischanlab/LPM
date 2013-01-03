@@ -33,11 +33,7 @@ class PDF extends FPDF {
 		$pdf->Ln(0.6);
 		//$pdf->Cell(0,1,'INDEX KINERJA DOSEN SEMESTER '.$mahasiswa->NO.);
 		
-		$pdf->Cell(0,1,'No Pendaftaran ',0,0,'L');
-		$pdf->Ln(0);
-		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,$mahasiswa->NO,0,0,'L');
-		$pdf->Ln(0.6);
+		
 		
 		$pdf->Cell(0,1,'NIM ',0,0,'L');
 		$pdf->Ln(0);

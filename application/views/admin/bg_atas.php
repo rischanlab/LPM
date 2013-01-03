@@ -16,7 +16,7 @@
 	<div class="inHeaderAdmin">
 		<div class="mosAdmin2">
 		Hallo, Administrator<br>
-		<?php echo $tanggal; ?> | <a href="http://pksi.uin-suka.ac.id" target="_blank">Help</a> | <a href="<?php echo base_url(); ?>index.php/kkn/logout_admin">Keluar</a>
+		<?php echo $tanggal; ?> | <a href="<?php echo base_url(); ?>manage/admin_management" target="_blank">Manage Admin</a> | <a href="<?php echo base_url(); ?>index.php/kkn/logout_admin">Keluar</a>
 		</div>
 	<div class="clear"></div>
 	</div>

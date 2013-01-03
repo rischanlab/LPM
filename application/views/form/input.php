@@ -90,6 +90,7 @@ window.onload = loadImages;
 												value="<?php echo set_value('NM_FAK',$this->form_data->NM_FAK); ?>" />
 											</td>
 										</tr>
+									
 
 										<tr>
 											<td valign="top" class="txt_login">Prodi</td>

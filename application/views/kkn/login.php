@@ -49,10 +49,7 @@
 							class="image" />
 						
 						<td width="175"><a href="<? echo base_url(); ?>manage/peserta_kkn_management"><div
-									class="menu-user">Masuk ke Panel Admin</div> </a> <a
-							href="<? echo base_url(); ?>kkn/passwordmhs"
-							onclick="return hs.htmlExpand(this, { objectType: 'iframe' } )"><div
-									class="menu-user">Ganti Password</div> </a> <a
+									class="menu-user">Masuk ke Panel Admin</div> </a>  <a
 							href="<? echo base_url(); ?>kkn/logout"><div class="menu-user">Keluar
 									/ Log Out</div> </a>
 						</td>

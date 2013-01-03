@@ -30,8 +30,22 @@ start with 1
 increment by 1 
 nomaxvalue; 
 
+create sequence kkn_dpl_seq
+start with 1 
+increment by 1 
+nomaxvalue; 
 
 
+create sequence kkn_admin_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
+create sequence kkn_kdmatkul_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
 
 create or replace trigger kkn_mhs_trigger
 before insert on KKN_MHS
@@ -88,5 +102,43 @@ AFTER DELETE ON KKN_DETAIL_KELOMPOK
 FOR EACH ROW
 BEGIN
 UPDATE KKN_MHS SET SUDAH='2' WHERE NO=:old.NO;
+END;
+/
+
+create or replace trigger kkn_dpl_trigger
+before insert on KKN_DPL
+for each row
+begin
+select kkn_dpl_seq.nextval into :new.ID_DOSEN from dual;
+end;
+/
+
+create or replace trigger kkn_admin_trigger
+before insert on KKN_ADMIN
+for each row
+begin
+select kkn_admin_seq.nextval into :new.ID from dual;
+end;
+/
+
+create or replace trigger kkn_kdmatkul_trigger
+before insert on KKN_MATKUL
+for each row
+begin
+select kkn_kdmatkul_seq.nextval into :new.ID from dual;
+end;
+/
+
+
+CREATE OR REPLACE TRIGGER nilaihuruf
+BEFORE INSERT OR UPDATE ON KKN_MHS
+FOR EACH ROW
+BEGIN
+DECLARE @NO FLOAT
+DECLARE @NILAI FLOAT
+SELECT @NO=NO, @NILAI=NILAI FROM KKN_MHS
+IF @NILAI >=60
+UPDATE KKN_MHS SET NILAI_HURUF='A' WHERE KODE=@KODE
+ELSE UPDATE KKN_MHS SET NILAI_HURUF='B' WHERE KODE=@KODE
 END;
 /

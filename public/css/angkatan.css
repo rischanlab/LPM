@@ -4,7 +4,7 @@
 	
 	#container{
 		margin: 0 auto;
-		width: 650px;
+		width: 850px;
 		border: 1px solid #D0D0D0;
 		-webkit-box-shadow: 0 0 8px #D0D0D0;
 	}	
@@ -23,14 +23,27 @@
 		font-weight: normal;
 	}
 	
-	#form input, #form select {
+	#form input{
 		padding: 2px 5px;
 		margin-right: 5px;
 		border: 1px solid #D0D0D0;
 		font: 13px/20px normal Helvetica, Arial, sans-serif;
 		background-color:#FFFFFF;
 		float: left;
+		width: 300px;
+		
 	}
+	
+	#form select {
+		padding: 2px 5px;
+		margin-right: 5px;
+		border: 1px solid #D0D0D0;
+		font: 13px/20px normal Helvetica, Arial, sans-serif;
+		background-color:#FFFFFF;
+		float: left;
+	
+	}
+	
 	
 	#form input#submit, #form input#button {
 		background-color: #003399;
@@ -58,6 +71,7 @@
 	#form #field {
 		height: 25px;
 		clear: both;
+		width: 850px;
 	}
 	
 	#form span {

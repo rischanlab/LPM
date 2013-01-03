@@ -4,8 +4,20 @@
 class PDF extends FPDF {
 	function Header() {
 		
+		$this->Image('./uploads/uin_mini.png',1,1.1);
+		$this->SetFont('Arial','b',15);
+		$this->Cell(0,1,'KEMENTRIAN AGAMA',0,0,'C');
+		$this->Ln(0.5);
+		$this->Cell(0,1,'UNIVERSITAS ISLAM NEGERI UIN SUNAN KALIJAGA',0,0,'C');
+		$this->Ln(0.5);
+		$this->Cell(0,1,'LEMBAGA PENGABDIAN KEPADA MASYARAKAT',0,0,'C');
+		$this->Image('./uploads/uin_mini.png',18,1);
+		$this->Ln(1.7);
+		$this->SetFont('Arial','b',20);
+		$this->Cell(0,1,'SERTIFIKAT',0,0,'C');
 
 	}
+
 }
 	$pdf=new PDF('P','cm','A4');
 	$pdf->Open();
@@ -18,64 +30,57 @@ class PDF extends FPDF {
 	//membuat kop tabel
 	$x=$pdf->GetY(); 
 	$pdf->SetY($x+1);
-		$pdf->SetFont('Arial','b',16);
-		$pdf->Cell(0,1,'KARTU PESERTA KKN',0,0,'C');
-		$pdf->Ln(1);
+		$pdf->SetFont('Arial','',10);
+		$pdf->Cell(0,1,'Nomor	: ' .$mahasiswa->PERIODE,0,0,'C');
 		$pdf->SetFont('Arial','b',12);
-		$pdf->Cell(0,1,'PANITIA PELAKSANA KKN PERIODE  ' .$mahasiswa->PERIODE.' TAHUN AKADEMIK '.$mahasiswa->TA.'ANGKATAN '.$mahasiswa->ANGKATAN,0,0,'C');
-		$pdf->SetFont('Arial','b',12);
-	//	$pdf->Cell(0,1,,0,0,'');
-	//	$this->Image('./asset/images/LogoISO.jpg',6.3,1.1);
+	
 		$pdf->Ln(1);
 		$pdf->SetFont('Arial','b',10);
-		$pdf->Cell(0,1,'TANDA TERIMA',0,0,'C');
+		//$pdf->Cell(0,1,'TANDA TERIMA',0,0,'C');
 		$pdf->Ln(1);
 		
 		$pdf->SetFont('Arial','',10);
-		$pdf->Cell(0,1,'Telah terima berkas pendaftaran Calon Peserta KKN Angkatan ke-' .$mahasiswa->RW,0,0,'L');
-		$pdf->Ln(0.6);
+		$pdf->Cell(0,1,'Lembaga Pengabdian kepada Masyarakat UIN Sunan Kalijaga Yogyakarta memberikan sertifikat kepada:',0,0,'L');
+	
 		//$pdf->Cell(0,1,'INDEX KINERJA DOSEN SEMESTER '.$mahasiswa->NO.);
-		
-		$pdf->Cell(0,1,'No Pendaftaran ',0,0,'L');
-		$pdf->Ln(0);
-		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,$mahasiswa->DESA,0,0,'L');
-		$pdf->Ln(0.6);
-		
-/**
-		$pdf->Cell(0,1,'NIM ',0,0,'L');
-		$pdf->Ln(0);
-		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,$mahasiswa->NIM,0,0,'L');
-		$pdf->Ln(0.6);
+		$pdf->Ln(1);
 		
 		
-		$pdf->Cell(0,1,'Nama ',0,0,'L');
+		$pdf->Cell(9,1,'Nama ',0,0,'L');
 		$pdf->Ln(0);
 		$pdf->Cell(8,1,':',0,0,'R');
 		$pdf->Cell(23,1,$mahasiswa->NAMA,0,0,'L');
 		$pdf->Ln(0.6);
 		
 		
-		$pdf->Cell(0,1,'Fakultas ',0,0,'L');
+		$pdf->Cell(0,1,'Tempat, dan Tanggal Lahir ',0,0,'L');
 		$pdf->Ln(0);
 		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,$mahasiswa->FAK,0,0,'L');
+		$pdf->Cell(23,1,'Temanggung, 14 Januari 1991',0,0,'L');
 		$pdf->Ln(0.6);
 		
 		
-		$pdf->Cell(0,1,'Lokasi KKN',0,0,'L');
+		$pdf->Cell(0,1,'Nomor Induk Mahasiswa ',0,0,'L');
 		$pdf->Ln(0);
 		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,'RW '.$mahasiswa->RW.','.$mahasiswa->DESA.','.$mahasiswa->NM_KEC.','.$mahasiswa->NM_KAB,0,0,'L');
+		$pdf->Cell(23,1,$mahasiswa->NIM,0,0,'L');
 		$pdf->Ln(0.6);
 		
-		$pdf->Cell(0,1,'DPL (Dosen Pembimbing Lapangan)',0,0,'L');
+		
+		$pdf->Cell(0,1,'Fakultas',0,0,'L');
 		$pdf->Ln(0);
 		$pdf->Cell(8,1,':',0,0,'R');
-		$pdf->Cell(23,1,$mahasiswa->NM_DOSEN,0,0,'L');
-		$pdf->Ln(4);
-
+		$pdf->Cell(23,1,'RW '.$mahasiswa->FAK,0,0,'L');
+		$pdf->Ln(0.6);
+		
+		
+		$pdf->Ln(1);
+		
+		$pdf->SetFont('Arial','',10);
+		$pdf->Cell(0,1,'Yang Telah melaksanakan Kuliah Kerja Nyata (KKN) Integrasi-Interkoneksi Tematik Posdaya Berbasis Masjid',0,0,'L');
+	
+		//$pdf->Cell(0,1,'INDEX KINERJA DOSEN SEMESTER '.$mahasiswa->NO.);
+		$pdf->Ln(1);
 		
 		$tanggal = date("d/m/Y");
 		
@@ -108,7 +113,7 @@ class PDF extends FPDF {
 		$pdf->Ln(0.6);
 
 						
-		**/
+		
 
 
 

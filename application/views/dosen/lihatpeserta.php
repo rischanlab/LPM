@@ -115,7 +115,7 @@
 	    			$('#id_periode').attr("disabled",true);
 	    			$.ajax({
 							type: "POST",
-							url : "<?php echo site_url('admin/select_periode')?>",
+							url : "<?php echo site_url('dosen/select_periode_d')?>",
 							data: id_ta,
 							success: function(msg){
 								$('#periode').html(msg);
@@ -137,7 +137,7 @@
 	    			$('#id_angkatan').attr("disabled",true);
 	    			$.ajax({
 							type: "POST",
-							url : "<?php echo site_url('admin/select_angkatan')?>",
+							url : "<?php echo site_url('dosen/select_angkatan_d')?>",
 							data: id_ta,
 							success: function(msg){
 								$('#angkatan').html(msg);
@@ -148,9 +148,7 @@
 	   </script>
 	   
 	   
-	   
-	   
-<script type="text/javascript">
+	   <script type="text/javascript">
 	  	$("#id_angkatan").change(function(){
 	    		var selectValues = $("#id_angkatan").val();
 	    		if (selectValues == 0){
@@ -161,7 +159,7 @@
 	    			$('#id_kelompok').attr("disabled",true);
 	    			$.ajax({
 							type: "POST",
-							url : "<?php echo site_url('dosen/select_kelompok')?>",
+							url : "<?php echo site_url('dosen/select_kelompok_d')?>",
 							data: id_ta,
 							success: function(msg){
 								$('#kelompok').html(msg);
@@ -170,4 +168,4 @@
 	    		}
 	    });
 	   </script>
-	 
+	   

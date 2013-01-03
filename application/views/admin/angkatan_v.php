@@ -17,12 +17,13 @@
 
 <?php
 	if (empty($cd)) {
-		$cd	 = new stdClass();
+		$cd = new stdClass();
 		$cd->ID_ANGKATAN = '';
-	    $cd->ANGKATAN = '';
+		$cd->ANGKATAN = '';
 		$cd->ID_TA = '';
 		$cd->ID_PERIODE = '';		
 		$cd->KD_DOSEN = '';	
+		$cd->SK_SERTIFIKAT = '';
 		$type = 'inputangkatan';	
 	} else {
 		$type = 'update';
@@ -64,7 +65,12 @@
 			?>
             <?php echo form_error('kd_dosen'); ?>
         </div>
-	  
+	
+	<div id="field">
+            <span >SK Sertifikat</span>
+            <?php echo form_input(array('name'=>'sk_sertifikat','maxlength'=>100,'value'=>$cd->SK_SERTIFIKAT));?>
+            <?php echo form_error('sk_sertifikat'); ?>
+        </div>
 	  
 	  
 	  

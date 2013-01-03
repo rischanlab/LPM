@@ -9,6 +9,7 @@ class Dosen extends CI_Controller {
 		$this->load->library(array('form_validation','session','image_lib'));
 		$this->load->helper(array('form','url', 'text_helper','date'));
 		$this->load->database();
+		$this->load->model('Dosen_model' );
 		session_start();
 	}
 
@@ -111,15 +112,12 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 								
 							$var["tanggal"] = mdate($datestring, $time);
 								
-								
-							$category['category'] = $this->Dosen_model->get_dropdown($nim);
-								
 							$this->load->view('dosen/bg_atas',$var);
 							$this->load->view('dosen/bg_menu');
 							
-							$this->load->model('admin_model');
+							
 							$data['cd'] = '';
-							$data['option_ta'] = $this->admin_model->getTaList();
+							$data['option_ta'] = $this->Dosen_model->getTaList();
 							$this->load->view('dosen/lihatpeserta', $data);
 							$this->load->view('dosen/bg_bawah');
 								
@@ -162,16 +160,48 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 
 
 	}
+	function select_periode_d(){
+		if('IS_AJAX') {
+			$data['option_periode'] = $this->Dosen_model->getPeriodeList();
+			$this->load->view('dosen/periode_v',$data);
+		}
+
+	}
+
+
+	function select_angkatan_d(){
+		if('IS_AJAX') {
+			$data['option_angkatan'] = $this->Dosen_model->getAngkatanList();
+			$this->load->view('dosen/angkatanoption_v',$data);
+		}
+	}
 	
 	function select_kelompok(){
 			$id_dosen	= $_SESSION['data']['id_user'];
             if('IS_AJAX') {
-        	$data['option_kelompok'] = $this->admin_model->getKelompokList($id_dosen);		
-			$this->load->view('admin/kelompok_v',$data);
+        	$data['option_kelompok'] = $this->Dosen_model->getKelompokList($id_dosen);		
+			$this->load->view('dosen/kelompok_dv',$data);
             }
 	}
-
-
+	
+	function getById( $id ) {
+		if( isset( $id ) )
+			echo json_encode( $this->Dosen_model->getById( $id ) );
+	}
+	
+	function read() {
+		$id_kelompok=$_SESSION['id_kelompok'];
+		echo json_encode( $this->Dosen_model->getAll($id_kelompok) );
+		
+	}
+	
+	function update() {
+		if( !empty( $_POST ) ) {
+			$this->Dosen_model->update();
+			echo 'Nilai Berhasil di Update!';
+		}
+	}
+	
 	function lihatanggota(){
 
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
@@ -199,7 +229,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 				$nim =$_SESSION['data']['id_user'];
 				$nm_user2 =$_SESSION['data']['nm_user'];
 				$id_kelompok=$this->input->post('id_kelompok');
-				
+				$_SESSION['id_kelompok']	= $id_kelompok;
 				
 				if ($id_kelompok==''){
 				?>
@@ -214,9 +244,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 				
 							$this->load->model('Dosen_model','',TRUE);
 								
-							$query=$this->Dosen_model->get_anggotakelompok($id_kelompok);
-								
-							$data_isi = array('query' => $query);
+							//echo $_SESSION['id_kelompok'];
+
 								
 							$info['kelompok'] = $this->Dosen_model->get_infokelompok($id_kelompok);
 							$q=$this->Dosen_model->get_infokelompok($id_kelompok);
@@ -236,8 +265,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 								
 							$this->load->view('dosen/bg_atas',$var);
 							$this->load->view('dosen/bg_menu');
-							$this->load->view('dosen/lihatanggota',$data_isi);
 							$this->load->view('dosen/infokelompok',$info);
+							$this->load->view('dosen/lihatanggota');
 							$this->load->view('dosen/bg_bawah');
 						}
 						

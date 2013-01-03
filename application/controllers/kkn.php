@@ -81,33 +81,10 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 	}
 
-	function detailberita()
+	function ganti_password()
 	{
 
-		$id_berita='';
-		if ($this->uri->segment(3) === FALSE)
-		{
-			$id_berita='';
-		}
-		else
-		{
-			$id_berita = $this->uri->segment(3);
-		}
-		$data=array();
-		$this->load->model('Kkn_model');
-		$this->load->library('Pagination');
-		$this->load->helper('captcha');
-		$session=isset($_SESSION['username_belajar']) ? $_SESSION['username_belajar']:'';
-		if($session!=""){
-			$pecah=explode("|",$session);
-			$data["nim"]=$pecah[0];
-			$data["nama"]=$pecah[1];
-		}
-
-
-		$this->load->view('Kkn/bg_kiri',$data);
-
-		$this->load->view('Kkn/bg_footer');
+		$this->load->view('kkn/ganti_password');
 	}
 	
 	function updatepassword()
@@ -124,7 +101,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 				alert('Password lama yang anda masukkan SALAH..!!!');
 			</script>
 			<?php
-			echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/Kkn/passwordmhs'>";
+			echo "<meta http-equiv='refresh' content='0; url=".base_url()."/kkn/ganti_password'>";
 		}
 		else if($psw!="" AND $psw_lama!="")
 		{

@@ -517,6 +517,106 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 	
 	}
 	
+	
+	
+	function sertifikat(){
+	
+		$datestring = "Login : %d-%m-%Y pukul %h:%i %a";
+		$time = time();
+		$data = array();
+		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
+		if($session!=""){
+
+			$kd_kelas2=$_SESSION['data']['kd_kelas'];
+			$nm_kelas2=$_SESSION['data']['nm_kelas'];
+			$kd_ta2 =$_SESSION['data']['kd_ta'];
+			$kd_smt2 =$_SESSION['data']['kd_smt'];
+			$id_user2 =$_SESSION['data']['id_user'];
+			$nm_user2 =$_SESSION['data']['nm_user'];
+			$kd_kur2 =$_SESSION['data']['kd_kur'];
+			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
+			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
+			$kd_mk2 =$_SESSION['data']['kd_mk'];
+			$sks_mk2 =$_SESSION['data']['sks_mk'];
+			$status2 =$_SESSION['data']['status'];
+
+
+			$data["nim"]=$id_user2;
+			$data["nama"]=$nm_user2;
+			$data["status"]=$status2;
+			
+
+			if($status2=="1"){	
+			
+				$nim =$_SESSION['data']['id_user'];
+				$nm_user2 =$_SESSION['data']['nm_user'];
+				$this->load->model('Mahasiswa_model','',TRUE);
+				$sudah=$this->Mahasiswa_model->get_sudah_kkn_mhs($nim);
+				foreach($sudah->result() as $hasil)
+				{ $status_sudah=$hasil->SUDAH;
+				if ($status_sudah=="3") {
+				
+				
+				
+						$this->load->model('Mahasiswa_model','',TRUE);
+
+						$data['mahasiswa'] = $this->Mahasiswa_model->get_sertifikat($nim)->row();
+							$data['title'] = 'Mahasiswa Detail';
+							$data['link_back'] = anchor('mahasiswa/index/','Kembali Ke Beranda',array('class'=>'back'));
+							// load view
+							$datestring = "Login : %d-%m-%Y pukul %h:%i %a";
+							$time = time();
+							$var = array();
+							$var["nama"]=$nm_user2;
+							
+							$var["tanggal"] = mdate($datestring, $time);
+						
+						
+						$this->load->view('mahasiswa/sertifikat', $data);
+						}
+				
+				
+				else {
+					?>
+					<script type="text/javascript">
+						alert('LPM Belum melakukan Pembagian Kelompok KKN secara keseluruhan, silahkan tunggu beberapa hari lagi');
+					</script>
+					<?php
+					echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/mahasiswa/'>";
+				
+				
+					}
+				
+				
+				}
+				}
+			else{
+				?>
+<script type="text/javascript" language="javascript">
+			alert("Anda tidak berhak masuk ke Control Panel mahasiswa...!!!");
+			</script>
+<?php
+echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
+			}
+		}
+		else{
+			?>
+<script type="text/javascript">
+			alert("Anda Harus Login Melalui SIA..!!!");	
+			window.location = "http://sia.uin-suka.ac.id/"
+			</script>
+<?php
+
+		}
+	
+	
+	
+	
+	
+	
+	
+	}
+	
 	function pasfoto(){
 		$datestring = "Login : %d-%m-%Y pukul %h:%i %a";
 		$time = time();

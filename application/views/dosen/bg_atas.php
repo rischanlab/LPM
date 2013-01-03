@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<link href="<?php echo base_url(); ?>assets/mos-css/mos-style.css"
+<link href="<?php echo base_url(); ?>assets/mos-css/mos-style-d.css"
 	rel="stylesheet" type="text/css" />
 
 <link rel="shortcut icon"

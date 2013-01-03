@@ -60,16 +60,18 @@
 							<?php echo form_error('id_angkatan'); ?>
 						</div>
 					</td>
-
+					
 					<td><span>Kelompok: </span>
 						<div id="kelompok">
 
 							<?php
-							echo form_dropdown("id_kelompok",array('Pilih Kelompok '=>'Pilih Angkatan Dahulu'),'','disabled');
+							echo form_dropdown("kelompok",array('Pilih Kelompok '=>'Pilih Angkatan Dahulu'),'','disabled');
 							?>
-							<?php echo form_error('id_kelompok'); ?>
+							<?php echo form_error('kelompok'); ?>
 						</div>
 					</td>
+
+					
 				</tr>
 
 
@@ -135,24 +137,3 @@
 
 
 
-
-<script type="text/javascript">
-	  	$("#id_angkatan").change(function(){
-	    		var selectValues = $("#id_angkatan").val();
-	    		if (selectValues == 0){
-	    			var msg = "<br><select name=\"id_kelompok\" disabled><option value=\"Pilih Kelompok\">Pilih Angkatan Dahulu</option></select>";
-	    			$('#kelompok').html(msg);
-	    		}else{
-	    			var id_angkatan = {id_angkatan:$("#id_angkatan").val()};
-	    			$('#id_kelompok').attr("disabled",true);
-	    			$.ajax({
-							type: "POST",
-							url : "<?php echo site_url('admin/select_kelompok')?>",
-							data: id_ta,
-							success: function(msg){
-								$('#kelompok').html(msg);
-							}
-				  	});
-	    		}
-	    });
-	   </script>

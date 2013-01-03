@@ -4,10 +4,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 
 <title>Detail Peserta KKN | LPM UIN Sunan Kalijaga Yogyakarta</title>
-
-<link href="<?php echo base_url(); ?>res/css/dosen-style.css" rel="stylesheet"
-	type="text/css" />
-
 </head>
 <div id="rightContent">
 		<?php

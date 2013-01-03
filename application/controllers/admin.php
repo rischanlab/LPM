@@ -285,11 +285,11 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		$offset = $page;
 		endif;
 
-		$datajoin["page"]				=$page;
-		$tot_hal						=$this->admin_model->get_join_data();
-		$config['base_url']				=base_url(). 'admin/angkatan';
+		$datajoin["page"]			=$page;
+		$tot_hal				=$this->admin_model->get_join_data();
+		$config['base_url']			=base_url(). 'admin/angkatan';
 		$config['total_rows']			=$tot_hal->num_rows();
-		$config['per_page']				=$limit;
+		$config['per_page']			=$limit;
 		$config['uri_segment']			=3;
 		$config['first_link']			='Awal';
 		$config['last_link']			='Akhir';
@@ -297,7 +297,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		$config['prev_link']			='Sebelumnya';
 		$this->pagination->initialize($config);
 		$datajoin["paginator"]			=$this->pagination->create_links();
-		$datajoin['cd_row']				=$this->admin_model->get_data_page($limit,$offset);
+		$datajoin['cd_row']			=$this->admin_model->get_data_page($limit,$offset);
 
 
 		$this->load->view('admin/show_angkatan_v', $datajoin);
@@ -392,8 +392,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/tambah_angg
 	function select_kelompok(){
 			
 		if('IS_AJAX') {
-			$data['option_kelompok'] = $this->admin_model->getKelompokList();
-			$this->load->view('admin/kelompok_v',$data);
+			$data['option_kelompok_a'] = $this->admin_model->getKelompokList();
+			$this->load->view('admin/kelompok_av',$data);
 		}
 	}
 
@@ -469,6 +469,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/tambah_angg
 		$this->form_validation->set_rules('id_ta', 'Tahun Akademik', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('id_periode', 'Periode KKN', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('kd_dosen', 'Ketua Panitia', 'trim|required|xss_clean');
+		$this->form_validation->set_rules('sk_sertifikat', 'SK Sertifikat', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == FALSE){
 			$this->angkatan();
 		} else {
@@ -478,7 +479,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/tambah_angg
 					'ANGKATAN' => $this->input->post('angkatan'),
 					'ID_TA' => $this->input->post('id_ta'),
 					'ID_PERIODE' => $this->input->post('id_periode'),
-					'KD_DOSEN' => $this->input->post('kd_dosen')
+					'KD_DOSEN' => $this->input->post('kd_dosen'),
+					'SK_SERTIFIKAT' => $this->input->post('sk_sertifikat')
 			);
 			$create = $this->admin_model->create_data($data);
 			//if ($create) $this->session->set_flashdata('message', 'Data created!');
