@@ -7,7 +7,13 @@ class Admin_model extends CI_Model
 		$this->table_name = 'KKN_ANGKATAN';
 		$this->table_name_anggota = 'KKN_DETAIL_KELOMPOK';
 	}
+	function getDosenJson()
+	{
+		 $query=$this->db->query("SELECT KD_DOSEN,NM_DOSEN FROM KKN_DPL");
+   
+		  return $query->result();
 	
+	}
 	/**	function nama_kelompok(){
 		 $query=$this->db->query("SELECT ID_KELOMPOK, INITCAP(NAMA_KELOMPOK) NAMA_KELOMPOK FROM KKN_KELOMPOK ORDER BY NAMA_KELOMPOK DESC");
    
@@ -150,6 +156,8 @@ class Admin_model extends CI_Model
 	}
 	
 	
+	/**
+	//iki data nek normal ra nggowo nompo response js
 	function get_join_data()
 	{
 		  $query=$this->db->query("SELECT A.ID_ANGKATAN, A.ANGKATAN, A.SK_SERTIFIKAT, B.PERIODE, C.TA ,INITCAP(D.NM_DOSEN) NM_DOSEN FROM KKN_ANGKATAN A, KKN_PERIODE B, KKN_TA C , KKN_DPL D WHERE B.ID_PERIODE=A.ID_PERIODE AND C.ID_TA=A.ID_TA AND D.KD_DOSEN=A.KD_DOSEN");
@@ -170,6 +178,30 @@ class Admin_model extends CI_Model
 	
 	}
 
+	
+	**/
+
+
+	function get_join_data()
+	{
+		  $query=$this->db->query("SELECT A.ID_ANGKATAN, A.ANGKATAN, A.SK_SERTIFIKAT, B.PERIODE, C.TA ,A.KD_DOSEN FROM KKN_ANGKATAN A, KKN_PERIODE B, KKN_TA C WHERE B.ID_PERIODE=A.ID_PERIODE AND C.ID_TA=A.ID_TA ");
+   
+		  return $query;
+	
+	
+	
+	}
+
+	
+	function get_data_page($limit, $offset)
+	{
+		  $query=$this->db->query("SELECT * FROM (SELECT K.*, ROWNUM rnum FROM(SELECT A.ID_ANGKATAN, A.ANGKATAN, A.SK_SERTIFIKAT, B.PERIODE, C.TA ,A.KD_DOSEN FROM KKN_ANGKATAN A, KKN_PERIODE B, KKN_TA C WHERE B.ID_PERIODE=A.ID_PERIODE AND C.ID_TA=A.ID_TA ORDER BY A.ANGKATAN ASC) K WHERE ROWNUM <= $limit) WHERE rnum >= $offset");
+   
+		  return $query;
+	
+	
+	}
+	
 	function update_data($kode,$data) //untuk meng-update record 
 	{
 	  	$this->db->where('ID_ANGKATAN', $kode);

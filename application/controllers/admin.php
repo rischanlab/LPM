@@ -12,7 +12,15 @@ class Admin extends CI_Controller {
 
 		session_start();
 	}
-
+	
+	
+	function cobajson() {
+		$this->load->model('admin_model');
+		$tampungan= $this->admin_model->getDosenJson();
+		echo json_encode($tampungan);
+		
+	}
+	
 	function index()
 	{
 		$session=isset($_SESSION['username_belajar']) ? $_SESSION['username_belajar']:'';
@@ -273,12 +281,12 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		$data['cd'] = '';
 		$data['cd_row'] = $this->admin_model->read_data();
 		$data['option_ta'] = $this->admin_model->getTaList();
-		$data['ketupat'] = $this->admin_model->get_dropdown_dosen();
+		//$data['ketupat'] = $this->admin_model->get_dropdown_dosen();
 		$this->load->view('admin/angkatan_v', $data);
 		//$datajoin['cd_row'] = $this->admin_model->get_join_data();
 
 		$page = $this->uri->segment(3);
-		$limit = 50;
+		$limit = 20;
 		if (!$page):
 		$offset=0;
 		else :

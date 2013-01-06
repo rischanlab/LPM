@@ -7,7 +7,7 @@ class Form_Model extends CI_Model
 	}
 	
 	function cek_mk($kd_mk){
-		$query=$this->db->query("SELECT * FROM KKN_MATKUL WHERE KD_MK ='$kd_mk'");
+		$query=$this->db->query("SELECT A.KD_FAK,A.NM_FAK,B.ID_MK,B.KD_MK FROM KKN_FAK A, KKN_MATAKULIAH B WHERE A.ID_FAK=B.ID_FAK AND KD_MK ='$kd_mk'");
 		return $query;
 	}
 	function get_data_from_db_sia($nim){

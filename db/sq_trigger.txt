@@ -67,7 +67,6 @@ select kkn_mhs_seq.nextval into :new.NO from dual;
 end;
 /
 
-
 create or replace trigger kkn_kelompok_trigger
 before insert on KKN_KELOMPOK
 for each row
@@ -83,7 +82,6 @@ begin
 select kkn_detail_kelompok_seq.nextval into :new.ID_DETAIL_KELOMPOK from dual;
 end;
 /
-
 
 create or replace trigger kkn_ta
 before insert on KKN_TA

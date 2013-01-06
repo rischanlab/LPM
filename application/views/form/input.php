@@ -215,7 +215,8 @@ window.onload = loadImages;
 										<tr>
 											<td valign="top" class="txt_login">Kecamatan</td>
 											<td class="txt_login"><input type="text" readonly="true" name="nm_kec"
-												class="inputx">
+												class="inputx"
+												/>
 											
 											</td>
 										</tr>
