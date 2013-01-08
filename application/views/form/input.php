@@ -82,6 +82,15 @@ window.onload = loadImages;
 												value="<?php echo set_value('NIM',$this->form_data->NIM); ?>" />
 											</td>
 										</tr>
+										
+										
+										<tr>
+											<td valign="top" class="txt_login">Tempat,Tgl Lahir</td>
+											<td class="txt_login"><input type="text" readonly="true"
+												name="ttl" class="inputx"
+												value="<?php echo set_value('TTL',$this->form_data->TMP_LAHIR.','.$this->form_data->TGL_LAHIR); ?>" />
+											</td>
+										</tr>
 
 										<tr>
 											<td valign="top" class="txt_login">Fakultas</td>
@@ -108,6 +117,14 @@ window.onload = loadImages;
 											</td>
 										</tr>
 										<tr>
+											<td valign="top" class="txt_login">Golongan Darah </td>
+											<td class="txt_login"><input type="text" readonly="true"
+												name="gol_darah" class="inputx"
+												value="<?php echo set_value('GOL_DARAH',$this->form_data->GOL_DARAH); ?>" />
+											</td>
+										</tr>
+										
+										<tr>
 											<td valign="top" class="txt_login">Jenis Kelamin</td>
 											<td class="txt_login"><input type="text" readonly="true"
 												name="j_kelamin" class="inputx"
@@ -123,18 +140,9 @@ window.onload = loadImages;
 											
 											</td>
 										</tr>
+										
 
-										<tr>
-											<td valign="top" class="txt_login">Golongan Darah*</td>
-											<td>
-											<select id="gol_darah" name="gol_darah">                                    
-												<option value="A" <?=$this->form_data->GOL_DARAH == 'A' ? ' selected="selected"' : '';?>>A</option>
-												<option value="B" <?=$this->form_data->GOL_DARAH == 'B' ? ' selected="selected"' : '';?>>B</option>
-												<option value="AB" <?=$this->form_data->GOL_DARAH == 'AB' ? ' selected="selected"' : '';?>>AB</option>
-												<option value="O" <?=$this->form_data->GOL_DARAH == 'O' ? ' selected="selected"' : '';?>>O</option>                                                                           
-												</select>
-											</td>
-										</tr>
+										
 										<tr>
 											<td valign="top" class="txt_login">Tinggi Badan*</td>
 											<td class="txt_login"><input type="text" name="tinggi"
@@ -214,10 +222,9 @@ window.onload = loadImages;
 										</tr>
 										<tr>
 											<td valign="top" class="txt_login">Kecamatan</td>
-											<td class="txt_login"><input type="text" readonly="true" name="nm_kec"
-												class="inputx"
-												/>
-											
+											<td class="txt_login"><input type="text" readonly="true"
+												name="nm_kec" class="inputx"
+												value="<?php echo set_value('NM_KEC',$this->form_data->NM_KEC); ?>" />
 											</td>
 										</tr>
 										<tr>

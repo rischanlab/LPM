@@ -1,0 +1,95 @@
+Kota Yogyakarta 14
+
+insert into MD_KEC values('K1','34712','Danurejan','','');
+insert into MD_KEC values('K2','34712','Gedongtengen','','');
+insert into MD_KEC values('K3','34712','Gondokusuman','','');
+insert into MD_KEC values('K4','34712','Gondomanan','','');
+insert into MD_KEC values('K5','34712','Jetis','','');
+insert into MD_KEC values('K6','34712','Kotagede','','');
+insert into MD_KEC values('K7','34712','Kraton','','');
+insert into MD_KEC values('K8','34712','Mantrijeron','','');
+insert into MD_KEC values('K9','34712','Mergangsan','','');
+insert into MD_KEC values('K10','34712','Ngampilan','','');
+insert into MD_KEC values('K11','34712','Pakualaman','','');
+insert into MD_KEC values('K12','34712','Tegalrejo','','');
+insert into MD_KEC values('K13','34712','Umbulharjo','','');
+insert into MD_KEC values('K14','34712','Wirobrajan','','');
+
+
+
+Sleman 17
+
+insert into MD_KEC values('S1','34043','Berbah','','');
+insert into MD_KEC values('S2','34043','Cangkringan','','');
+insert into MD_KEC values('S3','34043','Depok','','');
+insert into MD_KEC values('S4','34043','Gamping','','');
+insert into MD_KEC values('S5','34043','Godean','','');
+insert into MD_KEC values('S6','34043','Kalasan','','');
+insert into MD_KEC values('S7','34043','Minggir','','');
+insert into MD_KEC values('S8','34043','Mlati','','');
+insert into MD_KEC values('S9','34043','Moyudan','','');
+insert into MD_KEC values('S10','34043','Ngaglik','','');
+insert into MD_KEC values('S11','34043','Ngemplak','','');
+insert into MD_KEC values('S12','34043','Pakem','','');
+insert into MD_KEC values('S13','34043','Prambanan','','');
+insert into MD_KEC values('S14','34043','Seyegan','','');
+insert into MD_KEC values('S15','34043','Sleman','','');
+insert into MD_KEC values('S16','34043','Tempel','','');
+insert into MD_KEC values('S17','34043','Turi','','');
+
+
+Kulon Progo 12
+
+insert into MD_KEC values('KP1','34012','Galur','','');
+insert into MD_KEC values('KP2','34012','Girimulyo','','');
+insert into MD_KEC values('KP3','34012','Kalibawang','','');
+insert into MD_KEC values('KP4','34012','Kokap','','');
+insert into MD_KEC values('KP5','34012','lendah','','');
+insert into MD_KEC values('KP6','34012','Nanggulan','','');
+insert into MD_KEC values('KP7','34012','Panjatan','','');
+insert into MD_KEC values('KP8','34012','Pengasih','','');
+insert into MD_KEC values('KP9','34012','Samigaluh','','');
+insert into MD_KEC values('KP10','34012','Sentolo','','');
+insert into MD_KEC values('KP11','34012','Temon','','');
+insert into MD_KEC values('KP12','34012','Wates','','');
+
+Gunung Kidul 18
+
+insert into MD_KEC values('G1','34035','Gedangsari','','');
+insert into MD_KEC values('G2','34035','Girisubo','','');
+insert into MD_KEC values('G3','34035','Karangmojo','','');
+insert into MD_KEC values('G4','34035','Ngawen','','');
+insert into MD_KEC values('G5','34035','Nglipar','','');
+insert into MD_KEC values('G6','34035','Paliyan','','');
+insert into MD_KEC values('G7','34035','Panggang','','');
+insert into MD_KEC values('G8','34035','Patuk','','');
+insert into MD_KEC values('G9','34035','Playen','','');
+insert into MD_KEC values('G10','34035','Pojong','','');
+insert into MD_KEC values('G11','34035','Purwosari','','');
+insert into MD_KEC values('G12','34035','Rongkop','','');
+insert into MD_KEC values('G13','34035','Saptosari','','');
+insert into MD_KEC values('G14','34035','Semanu','','');
+insert into MD_KEC values('G15','34035','Semin','','');
+insert into MD_KEC values('G16','34035','Tanjungsari','','');
+insert into MD_KEC values('G17','34035','Tepus','','');
+insert into MD_KEC values('G18','34035','Wonosari','','');
+
+
+Bantul 17
+insert into MD_KEC values('B1','34027','Bambang Lipuro','','');
+insert into MD_KEC values('B2','34027','Banguntapan','','');
+insert into MD_KEC values('B3','34027','Bantul','','');
+insert into MD_KEC values('B4','34027','Dlingo','','');
+insert into MD_KEC values('B5','34027','Imogiri','','');
+insert into MD_KEC values('B6','34027','Jetis','','');
+insert into MD_KEC values('B7','34027','Kasihan','','');
+insert into MD_KEC values('B8','34027','Kretek','','');
+insert into MD_KEC values('B9','34027','Pajangan','','');
+insert into MD_KEC values('B10','34027','Pandek','','');
+insert into MD_KEC values('B11','34027','Piyungan','','');
+insert into MD_KEC values('B12','34027','Pleret','','');
+insert into MD_KEC values('B13','34027','Pundong','','');
+insert into MD_KEC values('B14','34027','Sanden','','');
+insert into MD_KEC values('B15','34027','Sedayu','','');
+insert into MD_KEC values('B16','34027','Sewon','','');
+insert into MD_KEC values('B17','34027','Srandakan','','');

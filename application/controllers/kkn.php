@@ -54,7 +54,7 @@ class Kkn extends CI_Controller {
 			alert("Username atau Password Yang Anda Masukkan Salah..!!!");			
 			</script>
 <?php
-echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
+echo "<meta http-equiv='refresh' content='0; url=".base_url()."/kkn'>";
 		}
 	}
 	function logout()

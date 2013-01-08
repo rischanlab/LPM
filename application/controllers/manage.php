@@ -228,7 +228,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 					
 				$crud->set_relation('KD_PROP','MD_PROP','NM_PROP');
 				$crud->display_as('KD_PROP','Prop');
-				$crud->display_as('NAMA_KELOMPOK','Nama Kelompok')
+				$crud->display_as('NAMA_KELOMPOK','Nama Kelompok (diawali dengan Angkatan KKN)')
 				->display_as('RW','Lokasi.RW')
 				->display_as('DESA','Lokasi.Desa');
 					
@@ -279,7 +279,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->set_language("indonesian");
 				$crud->set_theme('datatables');
 				$crud->set_table('KKN_DETAIL_KELOMPOK');
-				$crud->set_relation('ID_KELOMPOK','KKN_KELOMPOK','Kelompok: {NAMA_KELOMPOK}, Desa: RW{RW},{DESA}');
+				$crud->set_relation('ID_KELOMPOK','KKN_KELOMPOK','{NAMA_KELOMPOK}, RW{RW},{DESA}');
 				$crud->display_as('ID_KELOMPOK','Nama Kelompok');
 					
 				$crud->unset_edit();	
@@ -476,12 +476,15 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->field_type('PERIODE','set',array('I','II','III','IV'));
 				$crud->display_as('PERIODE','Nama Periode')
 				->display_as('TANGGAL_MULAI','Tanggal Mulai KKN')
+				->display_as('TEMA_KKN','Tema KKN')
+				->display_as('UPLOAD_BUKU','Buku Panduan KKN')
 				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN');
 				
 					
-				$crud->add_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA');
-				$crud->edit_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA');
-				$crud->columns('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA');
+				$crud->add_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
+				$crud->edit_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
+				$crud->columns('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
+				$crud->set_field_upload('UPLOAD_BUKU','assets/uploads/files');
 				$output = $crud->render();
 					
 

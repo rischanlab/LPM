@@ -787,14 +787,14 @@ class CI_DB_oci8_driver extends CI_DB {
 	 * @param   integer the offset value
 	 * @return  string
 	 */
-	protected function _limit($sql, $limit, $offset)
+	function _limit($sql, $limit, $offset)
 	{
 		$limit = $offset + $limit;
-		$newsql = "SELECT * FROM (select inner_query.*, rownum rnum FROM ($sql) inner_query WHERE rownum < $limit)";
+		$newsql = "SELECT * FROM (select inner_query.*, rownum rnum FROM ($sql) inner_query WHERE rownum <= $limit)";
 
 		if ($offset != 0)
 		{
-			$newsql .= " WHERE rnum >= $offset";
+			$newsql .= " WHERE rnum > $offset";
 		}
 
 		// remember that we used limits

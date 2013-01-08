@@ -13,10 +13,9 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/js/ui.theme.css" type="text/	css" media="all" />
 		<script src="<?php echo base_url();?>assets/js/jquery.min.js" type="text/javascript"></script>
 		<script src="<?php echo base_url();?>assets/js/jquery-ui.min.js" type="text/javascript"></script>
-		 <script type="text/javascript" src="<?php echo base_url();?>assets/json/jquery.js"></script>
-		<script type="text/javascript" src="<?php echo base_url();?>assets/json/jquery.autocomplete.js"></script>
+		
 		<script type="text/javascript">
-		     $(function() {
+		       $(function() {
 			$("#kd_dosen").autocomplete({
 				source: function( request, response ) {
 				$.ajax({
@@ -26,9 +25,9 @@
 					success: function(data) {
             					response($.map(data, function(item) {
                 				return {
-									label: item.state,
-									KD_DOSEN: item.KD_DOSEN,
-									NM_DOSEN: item.NM_DOSEN
+									label: item.NM_DOSEN,
+									id: item.KD_DOSEN,
+									kd_dosen:item.NM_DOSEN
 									};
             				}));
 						}
@@ -36,11 +35,12 @@
 				},
 				minLength: 2,
 				select: function(event, ui) {
-					$('#KD_DOSEN').val(ui.item.KD_DOSEN);
-					$('#NM_DOSEN').val(ui.item.NM_DOSEN);
+					//$('#state_id').val(ui.item.KD_DOSEN);
+				
 				}
 			});
-		     });
+		});
+
 		 </script>
 </head>
 <body>

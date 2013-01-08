@@ -6,11 +6,37 @@ http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir
 
 SYARIAH
 MASKUN
-http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09350007&nm_user=MASKUN%20ABIDIN&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=PERBANDINGAN%20MAZHAB&kd_mk=PMH4000&sks_mk=0&status=1
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09360022&nm_user=MASKUN%20ABIDIN&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=PERBANDINGAN%20MAZHAB&kd_mk=PMH4000&sks_mk=0&status=1
+
+TARBIYAH
+FITRIYANI RISMAWATI
+PENDIDIKAN AGAMA ISLAM
+12410269 
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=12410269 &nm_user=FITRIYANI%20RISMAWATI&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=PENDIDIKAN%20AGAMA%20ISLAM&kd_mk=PMH4000&sks_mk=0&status=1
 
 
 
 
+USHULUDIN
+12540094
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=12540094&nm_user=USHULUDIN&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=USHULUDIN&kd_mk=PMH4000&sks_mk=0&status=1
+
+
+Dakwah
+12220120
+
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=12220120&nm_user=Dakwah&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=Dakwah&kd_mk=PMH4000&sks_mk=0&status=1
+
+
+Adab
+12110096  210893
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=12110096&nm_user=Adab&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=Adab&kd_mk=PMH4000&sks_mk=0&status=1
+
+
+Febi
+12820052
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=12820052&nm_user=Febi&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=Febi&kd_mk=PMH4000&sks_mk=0&status=1
 
 
 

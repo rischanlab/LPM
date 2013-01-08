@@ -21,7 +21,10 @@
 				<td class="data">NIM</td>
 				<td class="data"><?php echo $mahasiswa->NIM; ?></td>
 			</tr>
-			
+			<tr>
+				<td class="data">TTL</td>
+				<td class="data"><?php echo $mahasiswa->TTL; ?></td>
+			</tr>
 			<tr>
 				<td class="data">Prodi</td>
 				<td class="data"><?php echo $mahasiswa->PRODI; ?></td>

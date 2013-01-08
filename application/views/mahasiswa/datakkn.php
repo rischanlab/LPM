@@ -19,10 +19,11 @@
 			echo "<tr ><th class='data'><b>Peserta KKN UIN Sunan Kalijaga</b></th></tr>";
 			echo "<tr ><td class='data'> Angkatan $row->ANGKATAN, Periode $row->PERIODE , Tahun Akademik $row->TA </td></tr>";
 			echo "<tr ><td class='data'>Mulai $row->TANGGAL_MULAI sampai dengan $row->TANGGAL_SELESAI</td></tr>";
-
-
-
+			echo "<tr ><td class='data'>download Buku Panduan KKN " ?>
+			<a href="<?php echo base_url(); ?>/assets/uploads/files/<?php echo $row->UPLOAD_BUKU ?>" target="_blank"><b><font color="red">disini</font></b></a>
 			
+			<?
+			echo "</td></tr>";
 
 			echo "</table>";
 

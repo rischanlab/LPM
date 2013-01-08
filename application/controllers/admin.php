@@ -121,7 +121,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/export'>";
 				else {
 						
 					$this->load->model('Admin_model','',TRUE);
-					$query=$this->Admin_model->get_anggotakelompok($id_kelompok);
+					$query=$this->Admin_model->get_kartu_anggota($id_kelompok);
 						
 					$data_isi = array('query' => $query);
 						
@@ -286,7 +286,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		//$datajoin['cd_row'] = $this->admin_model->get_join_data();
 
 		$page = $this->uri->segment(3);
-		$limit = 20;
+		$limit = 5;
 		if (!$page):
 		$offset=0;
 		else :

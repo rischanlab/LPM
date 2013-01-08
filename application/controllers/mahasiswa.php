@@ -373,8 +373,8 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 					$this->load->view('mahasiswa/bg_atas',$var);
 					$this->load->view('mahasiswa/bg_menu');
 					$this->load->view('mahasiswa/datakkn',$datakkn);
-					$this->load->view('mahasiswa/lihatkelompok',$data_isi);
 					$this->load->view('mahasiswa/infokelompok',$info);
+					$this->load->view('mahasiswa/lihatkelompok',$data_isi);
 					$this->load->view('mahasiswa/bg_bawah');
 					
 				}else {

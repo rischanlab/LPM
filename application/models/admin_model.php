@@ -93,9 +93,17 @@ class Admin_model extends CI_Model
 			return $query;
 
 		}
+		
+		function get_kartu_anggota($id_kelompok){
+
+			$query=$this->db->query("
+			select B.NIM, INITCAP(B.NAMA) nama, B.PATH_FOTO , INITCAP(B.FAK) fak, C.RW ,INITCAP(C.DESA) desa, INITCAP(D.NM_KEC) nm_kec, INITCAP(E.NM_KAB) nm_kab, INITCAP(F.NM_PROP) nm_prop, G.ANGKATAN, INITCAP(G.KD_DOSEN) NM_DOSEN,to_char(I.TANGGAL_MULAI, 'dd-mm-yyyy') as mulai, to_char(I.TANGGAL_SELESAI, 'dd-mm-yyyy') as selesai, K.PERIODE, L.TA FROM KKN_MHS B,KKN_KELOMPOK C,MD_KEC D,MD_KAB E,MD_PROP F,KKN_ANGKATAN G,KKN_PERIODE I, KKN_DETAIL_KELOMPOK J, KKN_PERIODE K, KKN_TA L WHERE C.KD_KEC=D.KD_KEC AND C.KD_KAB=E.KD_KAB AND C.KD_PROP=F.KD_PROP AND C.ID_ANGKATAN=G.ID_ANGKATAN AND G.ID_PERIODE=I.ID_PERIODE AND J.ID_KELOMPOK=C.ID_KELOMPOK AND B.NO=J.NO AND G.ID_PERIODE=K.ID_PERIODE AND G.ID_TA=L.ID_TA AND j.ID_KELOMPOK=$id_kelompok");
+			return $query;
+
+		}
 
 		function get_infokelompok($id_kelompok){
-			$query=$this->db->query("select INITCAP(A.NAMA_KELOMPOK) NAMA_KELOMPOK, A.RW, INITCAP(A.DESA) DESA, INITCAP(B.NM_KEC) NM_KEC , INITCAP(C.NM_KAB) NM_KAB , INITCAP(D.NM_PROP) NM_PROP FROM KKN_KELOMPOK A, MD_KEC B, MD_KAB C, MD_PROP D WHERE A.KD_KEC=B.KD_KEC AND A.KD_KAB=C.KD_KAB AND A.KD_PROP=D.KD_PROP AND ID_KELOMPOK=$id_kelompok");
+			$query=$this->db->query("select A.NAMA_KELOMPOK NAMA_KELOMPOK, A.RW, INITCAP(A.DESA) DESA, INITCAP(B.NM_KEC) NM_KEC , INITCAP(C.NM_KAB) NM_KAB , INITCAP(D.NM_PROP) NM_PROP FROM KKN_KELOMPOK A, MD_KEC B, MD_KAB C, MD_PROP D WHERE A.KD_KEC=B.KD_KEC AND A.KD_KAB=C.KD_KAB AND A.KD_PROP=D.KD_PROP AND ID_KELOMPOK=$id_kelompok");
 			return $query;
 
 		}
@@ -195,11 +203,17 @@ class Admin_model extends CI_Model
 	
 	function get_data_page($limit, $offset)
 	{
+		  
+		$sql="SELECT A.ID_ANGKATAN, A.ANGKATAN, A.SK_SERTIFIKAT, B.PERIODE, C.TA ,A.KD_DOSEN FROM KKN_ANGKATAN A, KKN_PERIODE B, KKN_TA C WHERE B.ID_PERIODE=A.ID_PERIODE AND C.ID_TA=A.ID_TA ORDER BY A.ANGKATAN ASC";
+		$sql_new = $this->db->_limit($sql,$limit,$offset);
+		$query = $this->db->query($sql_new);
+		return $query;
+		  /**
 		  $query=$this->db->query("SELECT * FROM (SELECT K.*, ROWNUM rnum FROM(SELECT A.ID_ANGKATAN, A.ANGKATAN, A.SK_SERTIFIKAT, B.PERIODE, C.TA ,A.KD_DOSEN FROM KKN_ANGKATAN A, KKN_PERIODE B, KKN_TA C WHERE B.ID_PERIODE=A.ID_PERIODE AND C.ID_TA=A.ID_TA ORDER BY A.ANGKATAN ASC) K WHERE ROWNUM <= $limit) WHERE rnum >= $offset");
    
 		  return $query;
 	
-	
+			**/
 	}
 	
 	function update_data($kode,$data) //untuk meng-update record 
