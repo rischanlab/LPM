@@ -65,7 +65,6 @@ $db['kkn']['autoinit'] = TRUE;
 $db['kkn']['stricton'] = FALSE;
 
 $db['saintek']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
-//$db['saintek']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.30)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
 $db['saintek']['username'] = "sia";
 $db['saintek']['password'] = "sia";
 $db['saintek']['database'] = "";
