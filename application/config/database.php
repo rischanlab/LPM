@@ -64,6 +64,22 @@ $db['kkn']['swap_pre'] = '';
 $db['kkn']['autoinit'] = TRUE;
 $db['kkn']['stricton'] = FALSE;
 
+/**
+$db['saintek']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.30)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['saintek']['username'] = "sia";
+$db['saintek']['password'] = "uinsuka";
+$db['saintek']['dbdriver'] = "oci8";
+$db['saintek']['dbprefix'] = '';
+$db['saintek']['pconnect'] = TRUE;
+$db['saintek']['db_debug'] = TRUE;
+$db['saintek']['cache_on'] = FALSE;
+$db['saintek']['cachedir'] = '';
+$db['saintek']['char_set'] = 'utf8';
+$db['saintek']['dbcollat'] = 'utf8_general_ci';
+$db['saintek']['swap_pre'] = '';
+$db['saintek']['autoinit'] = TRUE;
+$db['saintek']['stricton'] = FALSE;
+**/
 $db['saintek']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
 $db['saintek']['username'] = "sia";
 $db['saintek']['password'] = "sia";
@@ -80,10 +96,9 @@ $db['saintek']['swap_pre'] = '';
 $db['saintek']['autoinit'] = TRUE;
 $db['saintek']['stricton'] = FALSE;
 
-$db['syariah']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
-$db['syariah']['username'] = "syariah";
-$db['syariah']['password'] = "syariah";
-$db['syariah']['database'] = "";
+$db['syariah']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.31)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['syariah']['username'] = "sia";
+$db['syariah']['password'] = "uinsuka";
 $db['syariah']['dbdriver'] = "oci8";
 $db['syariah']['dbprefix'] = '';
 $db['syariah']['pconnect'] = TRUE;
@@ -95,6 +110,96 @@ $db['syariah']['dbcollat'] = 'utf8_general_ci';
 $db['syariah']['swap_pre'] = '';
 $db['syariah']['autoinit'] = TRUE;
 $db['syariah']['stricton'] = FALSE;
+
+$db['adab']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.33)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['adab']['username'] = "sia";
+$db['adab']['password'] = "uinsuka";
+$db['adab']['dbdriver'] = "oci8";
+$db['adab']['dbprefix'] = '';
+$db['adab']['pconnect'] = TRUE;
+$db['adab']['db_debug'] = TRUE;
+$db['adab']['cache_on'] = FALSE;
+$db['adab']['cachedir'] = '';
+$db['adab']['char_set'] = 'utf8';
+$db['adab']['dbcollat'] = 'utf8_general_ci';
+$db['adab']['swap_pre'] = '';
+$db['adab']['autoinit'] = TRUE;
+$db['adab']['stricton'] = FALSE;
+
+$db['dakwah']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.25)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['dakwah']['username'] = "sia";
+$db['dakwah']['password'] = "uinsuka";
+$db['dakwah']['dbdriver'] = "oci8";
+$db['dakwah']['dbprefix'] = '';
+$db['dakwah']['pconnect'] = TRUE;
+$db['dakwah']['db_debug'] = TRUE;
+$db['dakwah']['cache_on'] = FALSE;
+$db['dakwah']['cachedir'] = '';
+$db['dakwah']['char_set'] = 'utf8';
+$db['dakwah']['dbcollat'] = 'utf8_general_ci';
+$db['dakwah']['swap_pre'] = '';
+$db['dakwah']['autoinit'] = TRUE;
+$db['dakwah']['stricton'] = FALSE;
+
+$db['soshum']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.24)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['soshum']['username'] = "sia";
+$db['soshum']['password'] = "uinsuka";
+$db['soshum']['dbdriver'] = "oci8";
+$db['soshum']['dbprefix'] = '';
+$db['soshum']['pconnect'] = TRUE;
+$db['soshum']['db_debug'] = TRUE;
+$db['soshum']['cache_on'] = FALSE;
+$db['soshum']['cachedir'] = '';
+$db['soshum']['char_set'] = 'utf8';
+$db['soshum']['dbcollat'] = 'utf8_general_ci';
+$db['soshum']['swap_pre'] = '';
+$db['soshum']['autoinit'] = TRUE;
+$db['soshum']['stricton'] = FALSE;
+
+$db['ushuludin']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.45)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['ushuludin']['username'] = "sia";
+$db['ushuludin']['password'] = "uinsuka";
+$db['ushuludin']['dbdriver'] = "oci8";
+$db['ushuludin']['dbprefix'] = '';
+$db['ushuludin']['pconnect'] = TRUE;
+$db['ushuludin']['db_debug'] = TRUE;
+$db['ushuludin']['cache_on'] = FALSE;
+$db['ushuludin']['cachedir'] = '';
+$db['ushuludin']['char_set'] = 'utf8';
+$db['ushuludin']['dbcollat'] = 'utf8_general_ci';
+$db['ushuludin']['swap_pre'] = '';
+$db['ushuludin']['autoinit'] = TRUE;
+$db['ushuludin']['stricton'] = FALSE;
+
+$db['tarbiyah']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.32)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['tarbiyah']['username'] = "sia";
+$db['tarbiyah']['password'] = "uinsuka";
+$db['tarbiyah']['dbdriver'] = "oci8";
+$db['tarbiyah']['dbprefix'] = '';
+$db['tarbiyah']['pconnect'] = TRUE;
+$db['tarbiyah']['db_debug'] = TRUE;
+$db['tarbiyah']['cache_on'] = FALSE;
+$db['tarbiyah']['cachedir'] = '';
+$db['tarbiyah']['char_set'] = 'utf8';
+$db['tarbiyah']['dbcollat'] = 'utf8_general_ci';
+$db['tarbiyah']['swap_pre'] = '';
+$db['tarbiyah']['autoinit'] = TRUE;
+$db['tarbiyah']['stricton'] = FALSE;
+
+$db['febi']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.55)(PORT=1521))(CONNECT_DATA=(SID=sia)))";
+$db['febi']['username'] = "sia";
+$db['febi']['password'] = "uinsuka";
+$db['febi']['dbdriver'] = "oci8";
+$db['febi']['dbprefix'] = '';
+$db['febi']['pconnect'] = TRUE;
+$db['febi']['db_debug'] = TRUE;
+$db['febi']['cache_on'] = FALSE;
+$db['febi']['cachedir'] = '';
+$db['febi']['char_set'] = 'utf8';
+$db['febi']['dbcollat'] = 'utf8_general_ci';
+$db['febi']['swap_pre'] = '';
+$db['febi']['autoinit'] = TRUE;
+$db['febi']['stricton'] = FALSE;
 
 /* End of file database.php */
 /* Location: ./application/config/database.php */
