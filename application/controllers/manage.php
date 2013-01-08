@@ -285,7 +285,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->unset_edit();	
 				$crud->add_fields('ID_KELOMPOK','NO');
 				$crud->edit_fields('ID_KELOMPOK','NO');
-				$crud->set_relation('NO','KKN_MHS','Nim: {NIM} , Jenis Kelamin: {JK}, Fakultas: {FAK}, Transportasi: {TRANSPORTASI}',array('SUDAH' => '2'));
+				$crud->set_relation('NO','KKN_MHS','{NIM},{JK},{FAK},{PRODI},{TRANSPORTASI}',array('SUDAH' => '2'));
 				// $crud->set_relation('user_id','users','username',array('status' => 'active'));
 				$crud->display_as('NO','Mahasiswa | Jenis Kelamin | Fakultas | Transportasi');
 				$crud->columns('ID_KELOMPOK','NO');
