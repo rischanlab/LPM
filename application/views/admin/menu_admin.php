@@ -27,8 +27,12 @@
 		<a href="<?php echo base_url(); ?>index.php/manage/peserta_kkn_management_all" ><img src="<?php echo base_url(); ?>assets/mos-css/img/allmember.png"><br>KKN Semua Angkatan</a>
 		</div>
 		<div class="shortcutHome">
+		<a href="<?php echo base_url(); ?>index.php/manage/dosen_kkn_management" ><img src="<?php echo base_url(); ?>assets/mos-css/img/dosen.png"><br>Dosen KKN</a>
+		</div>
+		<div class="shortcutHome">
 		<a href="<?php echo base_url(); ?>index.php/manage/ta_management" ><img src="<?php echo base_url(); ?>assets/mos-css/img/ta.png"><br>Atur Tahun Akademik</a>
 		</div>
+		
 		<div class="shortcutHome">
 		<a href="<?php echo base_url(); ?>index.php/manage/periode_management" ><img src="<?php echo base_url(); ?>assets/mos-css/img/periode.png"><br>Atur Periode</a>
 		</div>
