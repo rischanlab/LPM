@@ -281,7 +281,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		$data['cd'] = '';
 		$data['cd_row'] = $this->admin_model->read_data();
 		$data['option_ta'] = $this->admin_model->getTaList();
-		//$data['ketupat'] = $this->admin_model->get_dropdown_dosen();
+		$data['ketupat'] = $this->admin_model->get_dropdown_dosen();
 		$this->load->view('admin/angkatan_v', $data);
 		//$datajoin['cd_row'] = $this->admin_model->get_join_data();
 

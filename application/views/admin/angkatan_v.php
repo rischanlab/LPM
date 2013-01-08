@@ -13,7 +13,7 @@
 		<link rel="stylesheet" href="<?php echo base_url();?>assets/js/ui.theme.css" type="text/	css" media="all" />
 		<script src="<?php echo base_url();?>assets/js/jquery.min.js" type="text/javascript"></script>
 		<script src="<?php echo base_url();?>assets/js/jquery-ui.min.js" type="text/javascript"></script>
-		
+	<!--	
 		<script type="text/javascript">
 		       $(function() {
 			$("#kd_dosen").autocomplete({
@@ -42,6 +42,8 @@
 		});
 
 		 </script>
+		 
+		 -->
 </head>
 <body>
 
@@ -90,12 +92,21 @@
             <?php echo form_error('id_periode'); ?>
         </div>
 		</div>
-	 
+	<!-- 
 	<div id="field">
 	<span class="label">Ketua Panitia KKN</span>
 	<input type="text" id="kd_dosen" name="kd_dosen" />
 	</div>
+     -->
      
+      <div id="field">
+            <span class="label">Ketua Panitia KKN</span>
+            	<?php
+				echo form_dropdown("kd_dosen",$ketupat,'maxlength="12"',"id='kd_dosen'");
+			?>
+            <?php echo form_error('kd_dosen'); ?>
+        </div>
+	
 	<div id="field">
             <span >SK Sertifikat</span>
             <?php echo form_input(array('name'=>'sk_sertifikat','maxlength'=>100,'value'=>$cd->SK_SERTIFIKAT));?>
