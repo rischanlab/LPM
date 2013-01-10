@@ -147,7 +147,18 @@ select kkn_fak_seq.nextval into :new.ID_FAK from dual;
 end;
 /
 
+CREATE OR REPLACE TRIGGER kkn_periode_duplicate
+before insert or update on KKN_PERIODE
+FOR each ROW
+declare
+v_dup number;
 
+begin
+select count(ID_PERIODE) INTO v_dup from KKN_PERIODE where PERIODE=:NEW.PERIODE and ID_TA=:NEW.ID_TA;
+if v_dup > 0 then Raise_Application_Error (-20100, 'This property already exists. The insert is cancelled.');
+end if;
+end;
+/
 
 
 

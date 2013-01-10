@@ -488,7 +488,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->columns('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
 				$crud->set_field_upload('UPLOAD_BUKU','assets/uploads/files');
 				
-				$crud->callback_before_insert(array($this,'checking_post_periode'));
+			
 				$output = $crud->render();
 					
 
@@ -513,26 +513,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		}
 	}
-	
-function checking_post_periode($post_array)
-	{	
-		$this->load->model('Admin_model','',TRUE);
-		$cek=$this->Admin_model->cek_periode_before_insert();
-		foreach($cek->result() as $hasil)
-			{ 
-				$pbefore	=$hasil->PERIODE;
-				$tabefore	=$hasil->ID_TA;
-			}
-	
-		if(($post_array['PERIODE']==$pbefore) && ($post_array['ID_TA']==$tabefore))
-		{
-			$post_array['PERIODE'] = 2;
-			$post_array['ID_TA'] = 'error';
-		}
-			return $post_array;
-		
-	}
-		
+
 	
 /**
 	function angkatan_management()

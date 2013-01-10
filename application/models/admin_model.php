@@ -15,8 +15,8 @@ class Admin_model extends CI_Model
 	
 	}
 	
-	function cek_periode_before_insert(){
-		$q =$this->db->query("SELECT PERIODE,ID_TA FROM KKN_PERIODE");
+	function cek_periode_before_insert($periode,$ta){
+		$q =$this->db->query("SELECT PERIODE,ID_TA FROM KKN_PERIODE WHERE PERIODE='$periode' AND ID_TA='$ta'");
 		return $q;
 	}
 	/**	function nama_kelompok(){
