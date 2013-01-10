@@ -473,7 +473,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->display_as('ID_TA','Pilih Tahun Akademik');
 				$crud->required_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR');
 				
-				$crud->field_type('PERIODE','set',array('I','II','III','IV','V'));
+				$crud->field_type('PERIODE','enum',array('I','II','III','IV','V'));
 				$crud->display_as('PERIODE','Nama Periode')
 				->display_as('TANGGAL_MULAI','Tanggal Mulai KKN')
 				->display_as('MULAI_DAFTAR','Tanggal Mulai Pendaftaran')
@@ -483,10 +483,12 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN');
 				
 					
-				$crud->add_fields('PERIODE','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
-				$crud->edit_fields('PERIODE','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
-				$crud->columns('PERIODE','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','TEMA_KKN','UPLOAD_BUKU');
+				$crud->add_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
+				$crud->edit_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
+				$crud->columns('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
 				$crud->set_field_upload('UPLOAD_BUKU','assets/uploads/files');
+				
+				$crud->callback_before_insert(array($this,'checking_post_periode'));
 				$output = $crud->render();
 					
 
@@ -511,6 +513,27 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 		}
 	}
+	
+function checking_post_periode($post_array)
+	{	
+		$this->load->model('Admin_model','',TRUE);
+		$cek=$this->Admin_model->cek_periode_before_insert();
+		foreach($cek->result() as $hasil)
+			{ 
+				$pbefore	=$hasil->PERIODE;
+				$tabefore	=$hasil->ID_TA;
+			}
+	
+		if(($post_array['PERIODE']==$pbefore) && ($post_array['ID_TA']==$tabefore))
+		{
+			$post_array['PERIODE'] = 2;
+			$post_array['ID_TA'] = 'error';
+		}
+			return $post_array;
+		
+	}
+		
+	
 /**
 	function angkatan_management()
 	{
