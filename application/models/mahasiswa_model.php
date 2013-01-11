@@ -6,7 +6,22 @@ class Mahasiswa_model extends CI_Model
 		parent::__construct();
 
 	}
-
+	
+	function Portal_Login($user)
+	{
+			$query	= $this->db->query("SELECT A.ID_USER,A.REF_INDEX,A.PASSWORD,A.ID_AKSES,A.LAST_ACCESS,A.STATUS,A.PERTANYAAN,A.JAWABAN,A.EMAIL,A.PROFILE,A.KETERANGAN, B.NM_AKSES 
+										FROM D_USER_PORTAL A, D_HAK_AKSES_PORTAL B 
+										WHERE A.ID_AKSES = B.ID_AKSES AND (A.ID_USER= UPPER ('$user') or A.ID_USER = '$user')");
+			return $query;
+	}
+		
+	function Data_Login($user)
+	{
+			$query	= $this->db->query("select a.id_user,a.password,a.id_akses,a.profile,a.email,a.last_access,b.nim,b.nama 
+										from d_user_portal a,d_mahasiswa b 
+										where a.ID_USER=b.NIM and (a.ID_USER= UPPER ('$user') or a.ID_USER = '$user')");
+			return $query;
+	}
 	function get_by_nim($nim){
 		$query=$this->db->query("SELECT NIM,INITCAP(NAMA) NAMA,JK,GOL_DARAH,INITCAP(TTL) TTL,TINGGI,BERAT,INITCAP(PEKERJAAN) PEKERJAAN,DECODE(STATUS_KAWIN,'B','Belum Kawin','K','Kawin') STATUS_KAWIN,INITCAP(FAK) FAK,INITCAP(PRODI) PRODI,INITCAP(ALAMAT_RUMAH) ALAMAT_RUMAH,RT_RUMAH,INITCAP(DESA_RUMAH) DESA_RUMAH,INITCAP(NM_KEC_RUMAH) NM_KEC_RUMAH,INITCAP(NM_KAB_RUMAH) NM_KAB_RUMAH,INITCAP(NM_PROP_RUMAH) NM_PROP_RUMAH,HP_MHS,INITCAP(ALAMAT_JOGJA) ALAMAT_JOGJA,RT_JOGJA,INITCAP(DESA_JOGJA) DESA_JOGJA,INITCAP(NM_KEC_JOGJA) NM_KEC_JOGJA,INITCAP(NM_KAB_JOGJA) NM_KAB_JOGJA,TELP_MHS,INITCAP(PRESTASI) PRESTASI,INITCAP(TRANSPORTASI) TRANSPORTASI,PATH_FOTO,PATH_SK_DOKTER,PATH_SK_GOLONGAN_DARAH,PATH_SK_CUTI,PATH_SK_TIDAK_HAMIL,SUDAH FROM KKN_MHS WHERE NIM='$nim'");
 		return $query;

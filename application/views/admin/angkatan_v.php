@@ -97,16 +97,8 @@
 	<span class="label">Ketua Panitia KKN</span>
 	<input type="text" id="kd_dosen" name="kd_dosen" />
 	</div>
-     -->
+   	  -->
      
-      <div id="field">
-            <span class="label">Ketua Panitia KKN</span>
-            	<?php
-				echo form_dropdown("kd_dosen",$ketupat,'maxlength="12"',"id='kd_dosen'");
-			?>
-            <?php echo form_error('kd_dosen'); ?>
-        </div>
-	
 	<div id="field">
             <span >SK Sertifikat</span>
             <?php echo form_input(array('name'=>'sk_sertifikat','maxlength'=>100,'value'=>$cd->SK_SERTIFIKAT));?>

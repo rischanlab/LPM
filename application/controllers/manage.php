@@ -377,10 +377,13 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->set_relation('KD_PROP','MD_PROP','NM_PROP');
 				$crud->display_as('KD_PROP','Prop');
 				
-				$crud->add_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD');
-				$crud->edit_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD');
-				$crud->required_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD');
-				$crud->columns('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_KAB','KD_PROP','PATH_TTD');
+				$crud->set_relation('ID_JABATAN','KKN_JABATAN','JABATAN');
+				$crud->display_as('ID_JABATAN','Jabatan Dosen');
+				
+				$crud->add_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
+				$crud->edit_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
+				$crud->required_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
+				$crud->columns('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_KAB','KD_PROP','PATH_TTD','ID_JABATAN');
 				$crud->set_field_upload('PATH_TTD','assets/uploads/files');
 				$crud->callback_after_upload(array($this,'example_callback_after_upload'));
 				$output = $crud->render();
@@ -470,6 +473,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->set_theme('datatables');
 				$crud->set_table('KKN_PERIODE');
 				$crud->set_relation('ID_TA','KKN_TA','TA');
+				$crud->set_relation('ID_DOSEN','KKN_DPL','NM_DOSEN');
 				$crud->display_as('ID_TA','Pilih Tahun Akademik');
 				$crud->required_fields('PERIODE','TANGGAL_MULAI','TANGGAL_SELESAI','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR');
 				
@@ -480,12 +484,13 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				->display_as('AKHIR_DAFTAR','Tanggal Akhir Pendaftaran')
 				->display_as('TEMA_KKN','Tema KKN')
 				->display_as('UPLOAD_BUKU','Buku Panduan KKN')
-				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN');
+				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN')
+				->display_as('ID_DOSEN','Ketua Panitia KKN');
 				
 					
-				$crud->add_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
-				$crud->edit_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
-				$crud->columns('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU');
+				$crud->add_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
+				$crud->edit_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
+				$crud->columns('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
 				$crud->set_field_upload('UPLOAD_BUKU','assets/uploads/files');
 				
 			

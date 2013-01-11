@@ -7,7 +7,23 @@ class Dosen_model extends CI_Model
 		parent::__construct();
 
 	}
-
+	
+	function Portal_Login($user)
+	{
+			$query	= $this->db->query("SELECT A.ID_USER,A.REF_INDEX,A.PASSWORD,A.ID_AKSES,A.LAST_ACCESS,A.STATUS,A.PERTANYAAN,A.JAWABAN,A.EMAIL,A.PROFILE,A.KETERANGAN, B.NM_AKSES 
+										FROM D_USER_PORTAL A, D_HAK_AKSES_PORTAL B 
+										WHERE A.ID_AKSES = B.ID_AKSES AND (A.ID_USER= UPPER ('$user') or A.ID_USER = '$user')");
+			return $query;
+	}
+		
+	function Data_Login($user)
+	{
+			$query	= $this->db->query("select a.id_user,a.password,a.id_akses,a.profile,a.email,a.last_access,b.kd_dosen,b.nm_dosen 
+										from d_user_portal a,d_dosen b 
+										where a.ID_USER=b.NIM and (a.ID_USER= UPPER ('$user') or a.ID_USER = '$user')");
+			return $query;
+	}
+	
 	function cek_dosen_membina($id_dosen){
 		$query=$this->db->query("SELECT A.ID_KELOMPOK,A.NAMA_KELOMPOK FROM KKN_KELOMPOK A, KKN_DPL B WHERE B.KD_DOSEN='$id_dosen'");
 		return $query;

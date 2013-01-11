@@ -476,7 +476,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/tambah_angg
 		$this->form_validation->set_rules('angkatan', 'Angkatan', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('id_ta', 'Tahun Akademik', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('id_periode', 'Periode KKN', 'trim|required|xss_clean');
-		$this->form_validation->set_rules('kd_dosen', 'Ketua Panitia', 'trim|required|xss_clean');
+	//	$this->form_validation->set_rules('kd_dosen', 'Ketua Panitia', 'trim|required|xss_clean');
 		$this->form_validation->set_rules('sk_sertifikat', 'SK Sertifikat', 'trim|required|xss_clean');
 		if ($this->form_validation->run() == FALSE){
 			$this->angkatan();
@@ -487,7 +487,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."admin/tambah_angg
 					'ANGKATAN' => $this->input->post('angkatan'),
 					'ID_TA' => $this->input->post('id_ta'),
 					'ID_PERIODE' => $this->input->post('id_periode'),
-					'KD_DOSEN' => $this->input->post('kd_dosen'),
+					//'KD_DOSEN' => $this->input->post('kd_dosen'),
 					'SK_SERTIFIKAT' => $this->input->post('sk_sertifikat')
 			);
 			$create = $this->admin_model->create_data($data);

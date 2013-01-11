@@ -30,6 +30,11 @@ start with 1
 increment by 1 
 nomaxvalue; 
 
+create sequence kkn_jabatan_seq
+start with 1 
+increment by 1 
+nomaxvalue; 
+
 create sequence kkn_dpl_seq
 start with 1 
 increment by 1 
@@ -113,6 +118,14 @@ FOR EACH ROW
 BEGIN
 UPDATE KKN_MHS SET SUDAH='2' WHERE NO=:old.NO;
 END;
+/
+
+create or replace trigger kkn_jabatan_trigger
+before insert on KKN_JABATAN
+for each row
+begin
+select kkn_jabatan_seq.nextval into :new.ID_JABATAN from dual;
+end;
 /
 
 create or replace trigger kkn_dpl_trigger
