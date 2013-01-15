@@ -45,7 +45,7 @@
 | the active record class
 */
 
-$active_group = 'saintek';
+$active_group = 'kkn';
 $active_record = TRUE;
 
 $db['kkn']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
@@ -63,6 +63,21 @@ $db['kkn']['dbcollat'] = 'utf8_general_ci';
 $db['kkn']['swap_pre'] = '';
 $db['kkn']['autoinit'] = TRUE;
 $db['kkn']['stricton'] = FALSE;
+
+$db['poli']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=127.0.0.1)(PORT=1521))(CONNECT_DATA=(SID=XE)))";
+$db['poli']['username'] = "poli";
+$db['poli']['password'] = "poli";
+$db['poli']['dbdriver'] = "oci8";
+$db['poli']['dbprefix'] = '';
+$db['poli']['pconnect'] = TRUE;
+$db['poli']['db_debug'] = TRUE;
+$db['poli']['cache_on'] = FALSE;
+$db['poli']['cachedir'] = '';
+$db['poli']['char_set'] = 'utf8';
+$db['poli']['dbcollat'] = 'utf8_general_ci';
+$db['poli']['swap_pre'] = '';
+$db['poli']['autoinit'] = TRUE;
+$db['poli']['stricton'] = FALSE;
 
 /**
 $db['saintek']['hostname'] = "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=172.16.0.30)(PORT=1521))(CONNECT_DATA=(SID=sia)))";

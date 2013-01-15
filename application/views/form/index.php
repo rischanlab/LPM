@@ -72,9 +72,9 @@ window.onload = loadImages;
 
 						<h2 class="txt_login">
 							Saya
-							<? echo $this->session->userdata('nm_user'); ?>
+							<? echo $_SESSION['data']['nm_user']; ?>
 							dari Prodi
-							<? echo $this->session->userdata('nm_prodi'); ?>
+							<? echo $_SESSION['data']['nm_prodi']; ?>
 							menyatakan bahwa :
 						</h2>
 						<tr>

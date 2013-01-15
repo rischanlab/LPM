@@ -7,6 +7,13 @@ class Admin_model extends CI_Model
 		$this->table_name = 'KKN_ANGKATAN';
 		$this->table_name_anggota = 'KKN_DETAIL_KELOMPOK';
 	}
+	
+	function getMhsJson($nim)
+	{
+		$query=$this->db->query("SELECT A.NIM, A.ANGKATAN, A.NAMA,A.TMP_LAHIR, A.TGL_LAHIR, A.NM_KEC, A.TELP_MHS,A.GOL_DARAH, A.BERAT, A.TINGGI,A.PEKERJAAN, A.STATUS_KAWIN, A.ALAMAT_MHS ,A.RT,A.DESA, A.HP_MHS,B.NM_PRODI, C.NM_JURUSAN, D.KD_FAK, D.NM_FAK,  DECODE(A.J_KELAMIN,'L','Laki-laki','P','Perempuan') J_KELAMIN, E.NM_KAB,F.NM_PROP FROM D_MAHASISWA A, MASTER_PRODI B, MASTER_JURUSAN C, MASTER_FAK D, MD_KAB E, MD_PROP F WHERE A.KD_KAB=E.KD_KAB AND A.KD_PRODI = B.KD_PRODI AND B.KD_JURUSAN = C.KD_JURUSAN AND C.KD_FAK = D.KD_FAK AND A.KD_PROP=F.KD_PROP AND A.NIM='$nim'");
+		return $query->result();
+	}
+	
 	function getDosenJson()
 	{
 		 $query=$this->db->query("SELECT KD_DOSEN,NM_DOSEN FROM KKN_DPL");

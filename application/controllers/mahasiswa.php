@@ -22,17 +22,10 @@ class Mahasiswa extends CI_Controller {
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
+			
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -76,17 +69,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -150,17 +135,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -244,19 +221,10 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
-
 
 			$data["nim"]=$id_user2;
 			$data["nama"]=$nm_user2;
@@ -317,17 +285,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -427,17 +387,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -527,17 +479,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
-			$id_user2 =$_SESSION['data']['id_user'];
+		$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -559,20 +503,48 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 				
 				
 						$this->load->model('Mahasiswa_model','',TRUE);
-
-						$data['mahasiswa'] = $this->Mahasiswa_model->get_sertifikat($nim)->row();
-							$data['title'] = 'Mahasiswa Detail';
-							$data['link_back'] = anchor('mahasiswa/index/','Kembali Ke Beranda',array('class'=>'back'));
-							// load view
-							$datestring = "Login : %d-%m-%Y pukul %h:%i %a";
-							$time = time();
-							$var = array();
-							$var["nama"]=$nm_user2;
+						$nilaikkn=$this->Mahasiswa_model->cek_nilai($nim);
+						if (count($nilaikkn->result_array())>0){
+								foreach($nilaikkn->result() as $items){
+										$nilai=$items->NILAI;}
+							}
+							else{
+								?>
+											<script type="text/javascript">
+											alert("Nilai Anda Belum diinputkan Oleh pihak LPM, sehingga Sertifikat belum dapat di generate..!!!");	
+											window.location = "http://sia.uin-suka.ac.id/"
+											</script>
+								<?php
 							
-							$var["tanggal"] = mdate($datestring, $time);
+							
+							}
 						
-						
-						$this->load->view('mahasiswa/sertifikat', $data);
+						if ($nilai!=null){
+								$data['mahasiswa'] = $this->Mahasiswa_model->get_sertifikat($nim)->row();
+								$data['title'] = 'Mahasiswa Detail';
+								$data['link_back'] = anchor('mahasiswa/index/','Kembali Ke Beranda',array('class'=>'back'));
+								// load view
+								$datestring = "Login : %d-%m-%Y pukul %h:%i %a";
+								$time = time();
+								$var = array();
+								$var["nama"]=$nm_user2;
+								
+								$var["tanggal"] = mdate($datestring, $time);
+							
+							
+								$this->load->view('mahasiswa/sertifikat', $data);
+								
+							}else {
+								
+								?>
+											<script type="text/javascript">
+											alert("Nilai Anda Belum diinputkan Oleh pihak LPM, sehingga Sertifikat belum dapat di generate..!!!");	
+											window.location = "http://sia.uin-suka.ac.id/"
+											</script>
+								<?php
+								
+								}
+								
 						}
 				
 				
@@ -624,17 +596,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
 			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 

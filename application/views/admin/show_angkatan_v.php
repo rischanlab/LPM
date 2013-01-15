@@ -5,7 +5,6 @@
                 <td id="angkatan" align="center">Angkatan</td>
                 <td id="ta">TA</td>
                 <td id="periode">Periode</td>
-                <td id="ketupat">Ketua Panitia KKN</td>
 		<td id="sk_sertifikat">SK Sertifikat KKN</td>
                 <td id="action">Action</td>
             </tr>
@@ -18,7 +17,6 @@
 					<td id="angkatan"><?php echo $row->ANGKATAN;?></td>
 					<td id="ta"><?php echo $row->TA;?></td>
 					<td id="periode"><?php echo $row->PERIODE;?></td>
-					<td id="ketupat"><?php echo $row->KD_DOSEN;?></td>
 					<td id="sk_sertifikat"><?php echo $row->SK_SERTIFIKAT;?></td>
 					<td id="action"> <a href="<?php echo site_url('admin/edit/'.$row->ID_ANGKATAN);?>">Edit</a> | <a href="<?php echo site_url('admin/delete/'.$row->ID_ANGKATAN);?>" onclick="return confirm('Are you sure?');">Delete</a></td>
 					

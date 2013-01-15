@@ -1,8 +1,15 @@
+MDk2NTAwMDc aq
+MDk2NTAwMDY kiki
+MTUwMjkzNjg3 pak agus
+MTUwMzY4MzQ5	PAK SUMAR
+
+
+
 
 RISCHAN M
 http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650007&nm_user=RISCHAN%20MAFRUR&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF40210&sks_mk=0&status=1
 
-
+http://localhost/LPM/cek_login.php?kd_kelas=2260710018328&nm_kelas=Tugas%20Akhir%20I%20%20A&kd_ta=2011&kd_smt=2&id_user=09650007&nm_user=RISCHAN%20MAFRUR&kd_kur=KUR-09&kd_prodi=22607&nm_prodi=TEKNIK%20INFORMATIKA&kd_mk=TIF20612&sks_mk=0&status=1
 
 SYARIAH
 MASKUN

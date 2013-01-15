@@ -1,3 +1,9 @@
+create sequence kkn_daftar_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+
 create sequence kkn_mhs_seq 
 start with 1 
 increment by 1 
@@ -62,7 +68,13 @@ nomaxvalue;
 
 
 
-
+create or replace trigger kkn_daftar_trigger
+before insert on KKN_PENDAFTARAN
+for each row
+begin
+select kkn_daftar_seq.nextval into :new.ID_WAKTU from dual;
+end;
+/
 
 create or replace trigger kkn_mhs_trigger
 before insert on KKN_MHS

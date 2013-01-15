@@ -14,6 +14,7 @@
 <body>
 <div id="header"> 
 	<div class="inHeaderAdmin">
+		<div class="mosAdmin1"><a href="<?php echo base_url(); ?>manage/pendaftaran" />Set Pendaftaran KKN</a></div>
 		<div class="mosAdmin2">
 		Hallo, Administrator<br>
 		<?php echo $tanggal; ?> | <a href="<?php echo base_url(); ?>manage/admin_management" target="_blank">Manage Admin</a> | <a href="<?php echo base_url(); ?>index.php/kkn/logout_admin">Keluar</a>

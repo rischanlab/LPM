@@ -365,7 +365,7 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 					->display_as('KD_KAB','Kab')
 					->display_as('KD_PROP','Prop')
 					->display_as('TELP_RUMAH','Telp')
-					->display_as('PATH_TTD','TTD Dosen')
+					->display_as('PATH_TTD','TTD Dosen(untuk ketua panitia dan ketua LPM wajib diupload)')
 					->display_as('MOBILE','Hp');
 					
 				$crud->set_relation('KD_KEC','MD_KEC','NM_KEC');
@@ -380,10 +380,10 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->set_relation('ID_JABATAN','KKN_JABATAN','JABATAN');
 				$crud->display_as('ID_JABATAN','Jabatan Dosen');
 				
-				$crud->add_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
-				$crud->edit_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
-				$crud->required_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','PATH_TTD','ID_JABATAN');
-				$crud->columns('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_KAB','KD_PROP','PATH_TTD','ID_JABATAN');
+				$crud->add_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','ID_JABATAN','PATH_TTD');
+				$crud->edit_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','ID_JABATAN','PATH_TTD');
+				$crud->required_fields('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_PROP','KD_KAB','KD_KEC','TELP_RUMAH','ID_JABATAN');
+				$crud->columns('KD_DOSEN','NM_DOSEN','NIP','MOBILE','ALMT_RUMAH','RT','DESA','KD_KAB','KD_PROP','ID_JABATAN','PATH_TTD');
 				$crud->set_field_upload('PATH_TTD','assets/uploads/files');
 				$crud->callback_after_upload(array($this,'example_callback_after_upload'));
 				$output = $crud->render();
@@ -480,17 +480,15 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 				$crud->field_type('PERIODE','enum',array('I','II','III','IV','V'));
 				$crud->display_as('PERIODE','Nama Periode')
 				->display_as('TANGGAL_MULAI','Tanggal Mulai KKN')
-				->display_as('MULAI_DAFTAR','Tanggal Mulai Pendaftaran')
-				->display_as('AKHIR_DAFTAR','Tanggal Akhir Pendaftaran')
 				->display_as('TEMA_KKN','Tema KKN')
 				->display_as('UPLOAD_BUKU','Buku Panduan KKN')
 				->display_as('TANGGAL_SELESAI','Tanggal Selesai KKN')
 				->display_as('ID_DOSEN','Ketua Panitia KKN');
 				
 					
-				$crud->add_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
-				$crud->edit_fields('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
-				$crud->columns('PERIODE','ID_TA','MULAI_DAFTAR','AKHIR_DAFTAR','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
+				$crud->add_fields('PERIODE','ID_TA','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
+				$crud->edit_fields('PERIODE','ID_TA','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
+				$crud->columns('PERIODE','ID_TA','TANGGAL_MULAI','TANGGAL_SELESAI','TEMA_KKN','UPLOAD_BUKU','ID_DOSEN');
 				$crud->set_field_upload('UPLOAD_BUKU','assets/uploads/files');
 				
 			
@@ -674,6 +672,50 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
 	}
 	
  
+	function pendaftaran()
+	{
+		$session=isset($_SESSION['username_belajar']) ? $_SESSION['username_belajar']:'';
+		if($session!=""){
+			$pecah=explode("|",$session);
+			$data["NIM"]=$pecah[0];
+			$data["NAMA"]=$pecah[1];
+			$data["STATUS"]=$pecah[3];
+
+			if($data["STATUS"]=="Admin"){
+		
+				$crud = new grocery_CRUD();
+				$crud->set_language("indonesian");
+				$crud->set_theme('datatables');
+				$crud->set_table('KKN_PENDAFTARAN');
+				
+				$crud->add_fields('FIRST_DATE','LAST_DATE');
+				$crud->edit_fields('FIRST_DATE','LAST_DATE');
+				$crud->columns('FIRST_DATE','LAST_DATE');
+				$crud->unset_add();
+				$crud->unset_delete();
+				$output = $crud->render();
+		
+				$this->_manage_output($output);
+				}
+				else{
+				?>
+<script type="text/javascript" language="javascript">
+			alert("Anda tidak berhak masuk ke Control Panel Admin...!!!");
+			</script>
+<?php
+echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
+			}
+		}
+		
+		else{
+			?>
+<script type="text/javascript" language="javascript">
+		alert("Anda belum Log In...!!!\nAnda harus Log In untuk mengakses halaman ini...!!!");
+		</script>
+<?php
+echo "<meta http-equiv='refresh' content='0; url=".base_url()."kkn'>";
+		}
+	}
 	
 	
 	function angkatan_management()

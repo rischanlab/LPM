@@ -1,0 +1,25 @@
+CREATE TABLE KKN_POLI(
+ID 								NUMBER,
+NIM								VARCHAR2(12) NOT NULL,
+NAMA							VARCHAR2(75),
+PRODI							VARCHAR2(75),
+FAK								VARCHAR2(75),
+GOL_DARAH						VARCHAR2(5),
+STATUS_SEHAT					VARCHAR2(75),
+REKOMENDASI						VARCHAR2(75),
+CONSTRAINT poli_unique UNIQUE (NIM),
+CONSTRAINT "CC_KKN_POLI_GOL_DARAH" CHECK (GOL_DARAH IN ('A','B','AB','O')) ENABLE, 
+CONSTRAINT kkn_poli_pk PRIMARY KEY(ID));
+
+create sequence kkn_poli_seq 
+start with 1 
+increment by 1 
+nomaxvalue; 
+
+create or replace trigger kkn_poli_trigger
+before insert on KKN_POLI
+for each row
+begin
+select kkn_poli_seq.nextval into :new.ID from dual;
+end;
+/

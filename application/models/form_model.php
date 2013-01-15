@@ -7,9 +7,10 @@ class Form_Model extends CI_Model
 	}
 	
 	function cek_waktu_kkn(){
-		$waktu = $this->db->query("SELECT TO_CHAR(MULAI_DAFTAR,'MM/DD/YYYY')MULAI_DAFTAR, TO_CHAR(AKHIR_DAFTAR,'MM/DD/YYYY')AKHIR_DAFTAR  FROM KKN_PERIODE");
+		$waktu = $this->db->query("SELECT TO_CHAR(FIRST_DATE,'MM/DD/YYYY')FIRST_DATE, TO_CHAR(LAST_DATE,'MM/DD/YYYY')LAST_DATE  FROM KKN_PENDAFTARAN");
 		return $waktu;
 	}
+	
 	
 	function cek_mk_kkn_sia($nim, $kd_mk){
 		$q = $this->db->query("SELECT A.KD_KRS, DECODE(A.STATUS_ULANG,'B','BARU','U','ULANG') STATUS_ULANG, A.NILAI,A.BOBOT_NILAI,E.TA,B.KD_PRODI,B.KD_MK,B.KD_TA FROM D_DETAIL_KRS A, V_KELAS B, D_URUT_KELAS C , D_KRS D, D_TA E, D_SEMESTER F WHERE A.KD_KELAS = B.KD_KELAS AND A.KD_KRS = C.KD_KRS (+) AND A.KD_KELAS = C.KD_KELAS (+) AND D.NIM = '$nim' AND D.KD_KRS = A.KD_KRS AND D.SEMESTER = (select max(SEMESTER) from D_KRS where nim = '$nim') AND F.KD_SMT = D.KD_SMT AND E.KD_TA = (select max(KD_TA) from D_KRS where nim ='$nim') AND B.KD_MK='$kd_mk';");
@@ -26,6 +27,11 @@ class Form_Model extends CI_Model
 		return $query;
 	
 	}
+	function get_data_dosen($kd_dosen){
+		$query=$this->db->query("SELECT KD_DOSEN,NM_DOSEN FROM KKN_DPL WHERE KD_DOSEN='$kd_dosen'");
+		return $query;
+	
+	}
 	
 	function insert_data_to_kkn_mhs($mhs){
 		return $this->db->insert('KKN_MHS', $mhs); 
@@ -35,6 +41,11 @@ class Form_Model extends CI_Model
 		$query=$this->db->query("SELECT * FROM KKN_MHS WHERE NIM ='$nim'");
 		return $query;
 	}
+	function cek_sudah_poli($nim){
+		$query=$this->db->query("SELECT * FROM KKN_POLI WHERE NIM ='$nim'");
+		return $query;
+	}
+	
 	function ganti_sudah_jadi_1($nim){
 		$query=$this->db->query("update KKN_MHS set SUDAH='1' where NIM='$nim'");
 		return $query;

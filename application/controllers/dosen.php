@@ -21,17 +21,8 @@ class Dosen extends CI_Controller {
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
-			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
 
 
@@ -73,19 +64,9 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
-			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
-
 
 			$data["nim"]=$id_user2;
 			$data["nama"]=$nm_user2;
@@ -207,20 +188,10 @@ echo "<meta http-equiv='refresh' content='0; url=".base_url()."index.php/'>";
 		$session=isset($_SESSION['data']['status']) ? $_SESSION['data']['status']:'';
 		if($session!=""){
 
-			$kd_kelas2=$_SESSION['data']['kd_kelas'];
-			$nm_kelas2=$_SESSION['data']['nm_kelas'];
-			$kd_ta2 =$_SESSION['data']['kd_ta'];
-			$kd_smt2 =$_SESSION['data']['kd_smt'];
 			$id_user2 =$_SESSION['data']['id_user'];
 			$nm_user2 =$_SESSION['data']['nm_user'];
-			$kd_kur2 =$_SESSION['data']['kd_kur'];
-			$kd_prodi2 =$_SESSION['data']['kd_prodi'];
-			$nm_prodi2 =$_SESSION['data']['nm_prodi'];
-			$kd_mk2 =$_SESSION['data']['kd_mk'];
-			$sks_mk2 =$_SESSION['data']['sks_mk'];
 			$status2 =$_SESSION['data']['status'];
-
-
+			
 			$data["nim"]=$id_user2;
 			$data["nama"]=$nm_user2;
 			$data["status"]=$status2;

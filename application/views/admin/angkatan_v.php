@@ -56,7 +56,6 @@
 		$cd->ANGKATAN = '';
 		$cd->ID_TA = '';
 		$cd->ID_PERIODE = '';		
-		$cd->KD_DOSEN = '';	
 		$cd->SK_SERTIFIKAT = '';
 		$type = 'inputangkatan';	
 	} else {

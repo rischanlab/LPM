@@ -159,13 +159,21 @@ tr.data1:hover small {color: #5b5b5b;}
 	background: url(img/Administrator.png) no-repeat right center;
 	text-shadow: 1px 1px #fff;
 }
+.mosAdmin1 {
+	float: center;
+	border: 0px solid #dcdcdc;
+	margin-right: 10%;
+	text-align: center;
+	padding: 0px 40px 10px 10px;
+	text-shadow: 1px 1px #fff;
+}
 
 .mosAdmin2 {
 	float: right;
 	border: 0px solid #dcdcdc;
 	margin-right: 10%;
 	text-align: right;
-	padding: 10px 40px 10px 10px;
+	padding: 0px 40px 10px 10px;
 	background: url(img/Administrator.png) no-repeat right;
 	text-shadow: 1px 1px #fff;
 }
