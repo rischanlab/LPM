@@ -41,6 +41,12 @@ $baris = 1;
 							<?php
 							
 							echo "<td class='data' align='right'>Ketua Panitia KKN</td>";
+							?>
+							<td class='data' align='right'><img
+								src="<?php echo base_url();?>assets/uploads/files/<?php echo $row->PATH_TTD; ?>" width="30">
+							
+							</td>
+							<?php
 							echo "<tr><td class='data'></td><td class='data' align='right'>$row->NM_DOSEN</td></tr>"
 						
 							?>
@@ -82,6 +88,12 @@ $baris = 1;
 								<?php
 								
 								echo "<td class='data' align='right'>Ketua Panitia KKN</td>";
+								?>
+							<td class='data' align='right'><img
+								src="<?php echo base_url();?>assets/uploads/files/<?php echo $row->PATH_TTD; ?>" width="30">
+							
+							</td>
+							<?php
 								echo "<tr><td class='data'></td><td class='data' align='right'>$row->NM_DOSEN</td></tr>"
 							
 								?>
